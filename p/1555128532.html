@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Misaka10013,misaka,御坂10013,御坂" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Misaka10013'blogs" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Misaka10013&#39;blogs">
+<meta property="og:url" content="https://misaka10013.cn/404.html">
+<meta property="og:site_name" content="Misaka10013&#39;blogs">
+<meta property="og:description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="article:published_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:modified_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:author" content="Misaka10013">
+<meta property="article:tag" content="misaka">
+<meta property="article:tag" content="misaka10013">
+<meta property="article:tag" content="御坂">
+<meta property="article:tag" content="御坂10013">
+<meta property="article:tag" content="御坂美琴">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://misaka10013.cn/404.html"/>
+
+
+
+
+
+  <title>linux系统简单笔记 | Misaka10013'blogs</title>
+  
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Misaka10013'blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">御坂世界</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            Photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-download"></i> <br />
+            
+            other
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://misaka10013.cn/p/1555128532.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Misaka10013">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Misaka10013'blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">linux系统简单笔记</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-31T21:47:22+08:00">2020-03-31</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">13k</span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="简单说说"><a href="#简单说说" class="headerlink" title="简单说说"></a>简单说说</h1><p>最近抽空看了份比较简单的linux系统教学的文章【<a href="http://c.biancheng.net/linux_tutorial/" target="_blank" rel="noopener">linux学习教程</a>】，感觉不错，清晰明了，随带写的笔记就分享在这吧。</p>
+<p>本来前面我一直在看的一份linux系统的教学是这个【<a href="http://linux.vbird.org/linux_basic/" target="_blank" rel="noopener">鳥哥的 Linux 私房菜</a>】。不少大佬推荐的文章，对于计算机系统讲的很详细，包括硬件设备以及计算机系统发展等都非常的详全，十分适合啥也不懂的小白观看，就是繁体字有点瞎眼，另外讲的太详细了反而不方便上手linux系统，毕竟操作计算机的技术是需要亲自上手去“动起来”的，光看知识文章解决不了使用问题。</p>
+<p>所有建议，先看【<a href="http://c.biancheng.net/linux_tutorial/" target="_blank" rel="noopener">linux学习教程</a>】，几天时间快速上手，再看【<a href="http://linux.vbird.org/linux_basic/" target="_blank" rel="noopener">鳥哥的 Linux 私房菜</a>】，大概个把月看完，补充其他相关计算机知识。</p>
+<h1 id="捡linux系统的重点聊聊"><a href="#捡linux系统的重点聊聊" class="headerlink" title="捡linux系统的重点聊聊"></a>捡linux系统的重点聊聊</h1><p>linux说来简单，其实就是一个为我们使用软件提供基础的系统。仔细回忆大家使用电脑中的过程，大家应该就能发现其实我们现在愈来愈倾向于使用各类软件和服务，大家直接操作系统的场景越来越少了，不管是win、mac还是安卓，大家都在往<strong>简化设置</strong>这个方向发展，简单的说，系统愈加傻瓜化，让用户集中精力在他们所需的功能上。目前我们很多时候会直接用到系统本身的场景，大概也就文件管理系统了。比如常常在电脑上操作去某个目录寻找某个文件这样的操作。所有我们真实需要了解熟悉系统操作的需求很有限。我觉得大概除了linux运维，我们大多数人对linux还是基于有需求的应用来学习使用是最高效的。毕竟真当你需要使用linux建站还是搞vpn的时候，大多应该都是安装安装程序、改改配置文件、跑跑运行就完了。</p>
+<p>基于如上思路，我来谈谈我们需要了解的关于linux的一些东西吧。</p>
+<h2 id="一是用户管理"><a href="#一是用户管理" class="headerlink" title="一是用户管理"></a>一是用户管理</h2><p>这部分其实和win没啥差别，但可能不少人很少用到win的用户管理（毕竟大多数人是一个人一个电脑），因为linux可以多用户同时在线多工，所以在用户管理这方面可能较win有一定区别。例如你如果在linux上面关机，那大概其他正登录在系统中的用户就骂娘了。</p>
+<p>对于用户的操作，只需要了解这几个命令就够了。<code>useradd id</code> 创建;<code>passwd id</code> 添加密码;<code>usermod id</code> 修改用户信息;<code>userdel -r id</code> 删除用户及其家目录文件;以上。当然我这里说的非常简略。</p>
+<p>linux的命令说到底也是个程序文件。像如上的<code>useradd</code>、<code>passwd</code>、<code>usermod</code>都是可以在系统相应目录中找到实体文件的。一个命令操作往往由 <code>命令 + 参数 + 对象</code> 这样构成。我们可以把命令（程序）理解为警察、消防员之类的现实实体，他们各种有各种工作的领域，如useradd主要负责建立账户<strong>（其实质上是在<code>/etc/default/useradd 和 /etc/login.defs</code>等文件中写入了新用户信息，所以你自己直接用linux上的vi或vim等文本编辑程序修改这些文件，和执行这个命令效果是一样的）</strong>，而在后面添加 <code>-xxx</code> 之类的就是让这个程序去干他负责的领域中的具体某项工作，如果你不知道这个命令能具体干啥，简单，直接 <code>命令 --h</code> 呼叫命令程序的说明书就行了（这些说明书一般放在 <code>usr/share/</code> 等目录中，可以参考本文后面的linux系统中常见的目录）。</p>
+<p>而对用户组的管理，可以极大的方便对一系列用户进行权限管理。作为root权限或者群组管理员的人可以方便的通过设置用户组对文件和命令的使用权限来限制用户。</p>
+<h2 id="二是终端（shell）"><a href="#二是终端（shell）" class="headerlink" title="二是终端（shell）"></a>二是终端（shell）</h2><p>所谓终端反正就是我们和电脑进行交互，你来我往的一个程序。在win这种图像界面系统的话，大家可以想象为<code>tab</code>键按下后获得你的焦点的那个界面，在win上面可能是某个输入框，可能是某个按钮。</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://vdio-1252926453.cos.ap-chengdu.myqcloud.com/pic/20200331214405.png" alt="终端"></p>
+<p>在linux中就简单了，就一个黑框框和一个闪动的光标，告诉你，电脑在等待你的命令。</p>
+<p>你可能需要了解到终端上这光标前短短的一行是啥意思。</p>
+<ul>
+<li><code>[root@localhost ~]#</code> 这就是所谓命令提示符。  </li>
+<li><code>~</code>代表你目前处于家目录中，如果你在其他目录，如根目录，就是显示<code>[root@localhost /]#</code>，如果是在<code>/root/misaka/yvban</code>，则显示<code>[root@localhost yvban]#</code>，即最后一层目录。至于如何进行目录操作我们下节在讲。  </li>
+<li><code>root</code>那里代表当前用户，你用户名是什么，他就是什么。当然最高管理员权限用户默认是root。  </li>
+<li><code>localhost</code>是硬件电脑的名称，和你平时在win上右击【我的电脑】–【属性】里面看到的那个计算机名没啥差别，不需要在意。  </li>
+<li><code>#</code>这个位置代表你是什么权限。<code>#</code>是root管理员，<code>$</code>代表普通用户。</li>
+</ul>
+<p>每个用户默认登录就在自己的家目录中。也就是说超级用户root登录就在<code>/root</code>，而普通用户登录就在<code>/home/用户名</code>目录下面。</p>
+<p>在终端，可以使用很多便利的快捷键。</p>
+<ul>
+<li><code>tab</code> 可以补全命令。任意目录、命令、文件名之类的，你只需要输个开头几个字母，tab一下，他就自动匹配，你也不用担心有前面几个字母同名的命令之类的，你多tab几下，他就会在这些前几个字母相同的命令之类的中切换。另外，在终端界面按 ↑ ↓ 等方向键，可以直接复制前后使用的命令。</li>
+<li><code>Ctrl + C</code> 终止当前终端命令的程序。</li>
+<li><code>Ctrl + Z</code> 把当前终端这个程序送到后台去。这就想win下面的最小化一样的操作。</li>
+<li><code>Ctrl + L</code> 清屏。</li>
+<li><code>Ctrl + U</code> 清除当前输入的命令，比按删除键快多了。</li>
+</ul>
+<h2 id="三是目录及文件操作"><a href="#三是目录及文件操作" class="headerlink" title="三是目录及文件操作"></a>三是目录及文件操作</h2><p>有句名言“linux下，一切皆文件”，不管是程序、命令还是硬盘、显示屏之类硬件的，在linux下都是以某个目录下的某个文件的形式存在着，这可能有点抽象，却很符合实际。毕竟在电脑眼里，不管是什么敲出的某个按键还是挂在系统上的某个硬盘，都只是0和1的组合而已，就是这么抽象。</p>
+<p>我们知道在电脑系统上就两种文件，一个是文本文件（文本），另一个就是二进制文件（诸如可执行程序、图片、视频、音乐等），由于在linux上不依靠win上面<code>.txt</code>、<code>.mp3</code>之类的后缀来区分文件，所有你可以简单的用文本编辑程序打开某个文件，如果不乱码，（排除文本字符解析的问题外）那就多半是文本文件了。我们很多代码都是写在文本文件中，并通过编译变为二进制的可执行程序。</p>
+<p>所有在目录和文本文件上，我们就主要<strong>了解怎么进行创建、删除、编辑等</strong>操作；在二进制程序上，<strong>学会安装、卸载和使用</strong>就完事了。</p>
+<h3 id="对文件和目录的创建、删除和编辑"><a href="#对文件和目录的创建、删除和编辑" class="headerlink" title="对文件和目录的创建、删除和编辑"></a>对文件和目录的创建、删除和编辑</h3><ul>
+<li><code>ls</code> 显示文件和目录。蓝色是目录、绿色可执行程序、红色是压缩包、浅绿是快捷链接、黄色是硬件设备、白色是其他。</li>
+<li><code>cd</code> 切换目录；<code>pwd</code> 显示当前目录（我在哪个目录）。</li>
+<li><code>mkdir</code> 创建目录；<code>touch</code> 创建文件。</li>
+<li><code>cp</code> 复制。</li>
+<li><code>rm</code> 删除。这个大家只需要记住一个命令形式。<code>rm -rf</code> 强大无副作用，欢迎使用。 &lt;(￣︶￣)&gt; 不小心删除了系统不怪我哈。</li>
+<li><code>cat</code> 一次性显示文件全部内容（不适合大文件）；<code>more</code> 向后翻页显示（只能向后翻页）；<code>less</code> 翻页显示；<code>tail</code> 看文件尾行（因为我们会经常用到 <code>&gt;&gt;</code> 这样的命令将有些程序的结果输出到某个文件的末尾，所以这个命令经常用来看文件末尾更新的内容）。</li>
+<li><code>vi</code>或<code>vim</code> ，这是使用文本编辑器编辑某个文件。不过也不是每个linux系统默认安装了vim，所以你最好检查一下，不过一般够安装了的。通过这个命令打开文件可以进行编辑，就想记事本一样，进行修改保存之类的操作。</li>
+</ul>
+<p><strong>注：</strong>不会具体使用，记得<code>命令 --h</code>看说明书！</p>
+<h3 id="安装软件和使用"><a href="#安装软件和使用" class="headerlink" title="安装软件和使用"></a>安装软件和使用</h3><p>那些什么复杂的prm包管理系统、程序依赖什么的我就懒得说了。直接yum就行了。yum是一种帮助我们安装程序的程序，你可以理解为360软件商城之类的，帮我们快捷安装软件的。</p>
+<ul>
+<li><code>yum install</code>  可以查看已安装和可以安装的程序包。这里的程序主要是yum设置文件中源提供的程序。</li>
+<li><code>yum install</code> 程序名  具体需要什么程序，自己网上查。当然仅支持一些普遍的程序。很多你需要的小程序，还是去网上找安装链接什么的把。</li>
+<li><code>yum -y update 程序名</code>  程序升级，这里的-y就是<code>-yes</code>的意思，就是让电脑姬直接安装，别啥事都要问一下好不好（￣へ￣）。</li>
+<li><code>ps</code> 查看进程，可以看哪些程序在运行。</li>
+<li><code>kill</code> 通过进程号（PID）干掉进程；<code>killall</code> 通过进程名干掉进程。</li>
+</ul>
+<p>这里有些常用的程序我们必须安装，比如vim文本编辑器。虽然大部分linux应该自带了的，不过也不一定。这些程序安装之后，最好到网上查阅如何使用这些程序，一般都有这些程序的消息使用教程，本文仅讨论linux系统，就不对一些程序详说了。</p>
+<h1 id="其他东西"><a href="#其他东西" class="headerlink" title="其他东西"></a>其他东西</h1><h2 id="linux系统常见目录"><a href="#linux系统常见目录" class="headerlink" title="linux系统常见目录"></a>linux系统常见目录</h2><p>因为“linux一切都是文件”的特性，我们大量的操作将基于在linux的目录树中进行各种“创、删、改”操作，所有熟悉linux系统的目录树就如同熟悉windows的控制面板、安卓的“设置应用”一样重要。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">+ 根目录</span><br><span class="line">|——bin&#x2F; 系统命令（脚本程序） 单用户模式下也可执行。</span><br><span class="line">|——boot&#x2F; 系统启动  文件内核、启动引导（grub）文件。</span><br><span class="line">|——dev&#x2F; 设备  硬件设备，包括本地硬盘分区。</span><br><span class="line">+——etc&#x2F; 配置文件  默认rpm安装的如用户信息、服务脚本、配置文件等放置。</span><br><span class="line">	|——ect&#x2F;passwd 用户信息</span><br><span class="line">	|——ect&#x2F;shadow 加密密码</span><br><span class="line">	|——ect&#x2F;group 用户组信息</span><br><span class="line">	|——ect&#x2F;gshadow 加密用户组</span><br><span class="line">|——home&#x2F; 普通用户主目录  所有用户相关文件。</span><br><span class="line">|——lib&#x2F; 系统函数</span><br><span class="line">|——media&#x2F; 挂载目录  软盘、光盘</span><br><span class="line">|——mnt&#x2F; 挂载目录  额外挂载目录，如U盘等，用于区分系统分区。</span><br><span class="line">|——misc&#x2F; 挂载目录  挂载NGS服务的共享目录。三个挂载目录可自由随便挂载。</span><br><span class="line">|——opt&#x2F; 第三方软件</span><br><span class="line">|——root&#x2F; root的主目录</span><br><span class="line">|——sbin&#x2F; 系统环境相关命令（程序）  root专用，系统权限命令。</span><br><span class="line">|——srv&#x2F; 服务数据目录  启动某些服务后，数据保存位置。</span><br><span class="line">|——tmp&#x2F;缓存临时目录。</span><br><span class="line">|——lost+found&#x2F; 系统崩溃、关机产生的碎片文件  可fsck工具检查用于修复，各分区可能也有，是分区备份恢复目录。</span><br><span class="line">+——proc&#x2F; 虚拟文件  其数据并不在硬盘上，而是在内存中（虚拟内存）。各目录保存了如 </span><br><span class="line">	|——proc&#x2F;cpuinfo 是保存 CPU 信息的，</span><br><span class="line">	|——proc&#x2F;devices 是保存设备驱动的列表的，</span><br><span class="line">	|——proc&#x2F;filesystems 是保存文件系统列表的，</span><br><span class="line">	|——proc&#x2F;net 是保存网络协议信息……持续的往这写入文件会导致内存大量被占用。</span><br><span class="line">|——sys&#x2F; 虚拟文件  系统与内核相关信息。</span><br><span class="line">+——usr (Unix Software Resource)系统默认存储软件位置。</span><br><span class="line">	|——usr&#x2F;bin&#x2F; 系统命令所有用户都可执行，与系统启动无关。单用户模式下不可用。</span><br><span class="line">	|——usr&#x2F;sbin&#x2F; 系统管理命令放根文件系统不必要的系统管理命令，如部分服务程序，root可用</span><br><span class="line">	|——usr&#x2F;lib&#x2F; 应用函数</span><br><span class="line">	|——usr&#x2F;XllR6&#x2F; 图形界面系统</span><br><span class="line">	|——usr&#x2F;local&#x2F; 手动安装软件位置</span><br><span class="line">	|——usr&#x2F;share&#x2F; 应用程序资源文件如帮助文档、说明文档和字体目录</span><br><span class="line">	|——usr&#x2F;src&#x2F; 源码包保存位置手工下载源码和内核源码包位置（默认程序下载位置）（不过笔者更习惯把手工下载的源码包保存到 &#x2F;usr&#x2F;local&#x2F;src&#x2F; 目录中，把内核源码保存到 &#x2F;usr&#x2F;src&#x2F;linux&#x2F; 目录中）</span><br><span class="line">	|——usr&#x2F;include&#x2F; C等编程语言头文件目录</span><br><span class="line">+——var 存储动态数据缓存、日志、软件产生文件等</span><br><span class="line">	|——var&#x2F;lib&#x2F; 程序运行调用或改变的数据保存位置如mysql数据库保存在&#x2F;var&#x2F;lib&#x2F;mysql&#x2F; 目录</span><br><span class="line">	|——var&#x2F;log&#x2F; 登录文件放置目录  比较重要的文件如 &#x2F;var&#x2F;log&#x2F;messages, &#x2F;var&#x2F;log&#x2F;wtmp 等</span><br><span class="line">	|——var&#x2F;run&#x2F; 进程保存  一些服务和程序运行后，PID（进程id）保存的位置</span><br><span class="line">	|——var&#x2F;spool&#x2F; 临时存放文件  例如 &#x2F;var&#x2F;spool&#x2F;mail&#x2F; 存放新收到的邮件，&#x2F;var&#x2F;spool&#x2F;cron&#x2F; 存放系统定时任务</span><br><span class="line">	|——var&#x2F;www&#x2F; RPM  包安装的 Apache 的网页主目录</span><br><span class="line">	|——var&#x2F;nis&#x2F;和&#x2F;var&#x2F;yp&#x2F; NIS 服务机制所使用的目录，nis 主要记录所有网络中每一个 client 的连接信息；yp 是 linux 的 nis 服务的日志文件存放的目录</span><br><span class="line">	|——var&#x2F;tmp&#x2F; 应用程序缓存  一些程序安装或执行时，需要在重启时使用的文件，完成后再删除</span><br></pre></td></tr></table></figure>
+<h2 id="常见linux服务及优化"><a href="#常见linux服务及优化" class="headerlink" title="常见linux服务及优化"></a>常见linux服务及优化</h2><p>相当于windows开机就启动了些乱七八糟的服务，通过以下列表可以关闭不需要的服务，减少服务器风险，提升性能。<br>请参考<a href="http://c.biancheng.net/view/1059.html" target="_blank" rel="noopener">Linux常见服务类别及功能</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+	<div>
+	
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	
+	</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+          
+            <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/1715425739.html" rel="next" title="御坂2019理财总结经验">
+                <i class="fa fa-chevron-left"></i> 御坂2019理财总结经验
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/p/1548883208.html" rel="prev" title="话谈人生生活三项内容">
+                话谈人生生活三项内容 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Misaka10013</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">138</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/misaka10013" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:648106369@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/misaka10013" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/zhang-ze-hao-34" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.lmyoaoa.com/inn/" title="明猪の雪地" target="_blank">明猪の雪地</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.liuboyuan.fun/" title="风雨轩窗日暮光" target="_blank">风雨轩窗日暮光</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/ygjzs/" title="跌倒的小黄瓜" target="_blank">跌倒的小黄瓜</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yujie.pro/" title="夜灭の小窝" target="_blank">夜灭の小窝</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单说说"><span class="nav-number">1.</span> <span class="nav-text">简单说说</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#捡linux系统的重点聊聊"><span class="nav-number">2.</span> <span class="nav-text">捡linux系统的重点聊聊</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一是用户管理"><span class="nav-number">2.1.</span> <span class="nav-text">一是用户管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二是终端（shell）"><span class="nav-number">2.2.</span> <span class="nav-text">二是终端（shell）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三是目录及文件操作"><span class="nav-number">2.3.</span> <span class="nav-text">三是目录及文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对文件和目录的创建、删除和编辑"><span class="nav-number">2.3.1.</span> <span class="nav-text">对文件和目录的创建、删除和编辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装软件和使用"><span class="nav-number">2.3.2.</span> <span class="nav-text">安装软件和使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他东西"><span class="nav-number">3.</span> <span class="nav-text">其他东西</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux系统常见目录"><span class="nav-number">3.1.</span> <span class="nav-text">linux系统常见目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见linux服务及优化"><span class="nav-number">3.2.</span> <span class="nav-text">常见linux服务及优化</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">御坂</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">292k</span>
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.0</div>
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66531323";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+	  <script src="https://misaka10013.cn/live2d/autoload.js"></script>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  <script src="/js/src/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd9dd27873bbc9806622a',
+      clientSecret: '5f85636536b9c39ca882ae2b231b271e9d180e0a',
+      repo: 'misaka10013.github.io',
+      owner: 'misaka10013',
+      admin: ['misaka10013'],
+      id: location.pathname,
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>

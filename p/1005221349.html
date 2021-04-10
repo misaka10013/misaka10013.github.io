@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Misaka10013,misaka,御坂10013,御坂" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Misaka10013'blogs" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Misaka10013&#39;blogs">
+<meta property="og:url" content="https://misaka10013.cn/404.html">
+<meta property="og:site_name" content="Misaka10013&#39;blogs">
+<meta property="og:description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="article:published_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:modified_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:author" content="Misaka10013">
+<meta property="article:tag" content="misaka">
+<meta property="article:tag" content="misaka10013">
+<meta property="article:tag" content="御坂">
+<meta property="article:tag" content="御坂10013">
+<meta property="article:tag" content="御坂美琴">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://misaka10013.cn/404.html"/>
+
+
+
+
+
+  <title>Ren’Py GAL开发学习笔记 | Misaka10013'blogs</title>
+  
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Misaka10013'blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">御坂世界</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            Photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-download"></i> <br />
+            
+            other
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://misaka10013.cn/p/1005221349.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Misaka10013">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Misaka10013'blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Ren’Py GAL开发学习笔记</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-16T23:03:35+08:00">2020-04-16</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">13k</span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Ren’Py作用"><a href="#Ren’Py作用" class="headerlink" title="Ren’Py作用"></a>Ren’Py作用</h1><p>Ren’Py是以python编译的支持安卓、pc、web的多平台GALgame开发引擎，具有脚本简单、支持广等优点。</p>
+<h1 id="脚本编辑"><a href="#脚本编辑" class="headerlink" title="脚本编辑"></a>脚本编辑</h1><h2 id="script-rpy脚本"><a href="#script-rpy脚本" class="headerlink" title="script.rpy脚本"></a>script.rpy脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line">define s &#x3D; Character(&#39;希尔维亚&#39;, color&#x3D;&quot;#c8ffc8&quot;)</span><br><span class="line">define w &#x3D; Character(&#39;我&#39;, color&#x3D;&quot;#c8c8ff&quot;)  &#x2F;&#x2F;定义角色名和角色名颜色</span><br><span class="line">define e &#x3D; Character(&quot;艾琳&quot;, image&#x3D;&quot;eileen&quot;)  &#x2F;&#x2F;定义了角色图片</span><br><span class="line">define p &#x3D; Character(&quot;player_name&quot;, dynamic&#x3D;True)  &#x2F;&#x2F;从一个变量中获取角色名称</span><br><span class="line">default wodouyao &#x3D; False  &#x2F;&#x2F;后宫flag</span><br><span class="line"></span><br><span class="line">label start:  &#x2F;&#x2F;label语句，用于剧情块。此处创建了start标签，是“start game”游戏入口。</span><br><span class="line"></span><br><span class="line">    scene bg meadow  &#x2F;&#x2F;scene清空所有图像，后面两个参数是tag标签（文件名）和属性（多个对应属性）。bg习惯指背景图片。图片输出命名规律如bg meadow.jpg、bg uni.jpg。</span><br><span class="line">    </span><br><span class="line">    \# 这是一条注释。</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;图像默认居中相接于底部</span><br><span class="line">    </span><br><span class="line">    with fade  &#x2F;&#x2F;with转场标签，后方参数为转场样式。此处是褪色。</span><br><span class="line"></span><br><span class="line">    &quot;希尔维亚&quot; &quot;嗨！今天的课怎么样？&quot;</span><br><span class="line">    </span><br><span class="line">    play music &quot;illurock.ogg&quot;  &#x2F;&#x2F;播放音乐</span><br><span class="line"></span><br><span class="line">    &quot;我&quot; &quot;挺好的……&quot;  &#x2F;&#x2F;say语句，第一个参数是说话角色，第二个参数是正在说的话。**“\”**反斜杠是转义符。</span><br><span class="line">    </span><br><span class="line">    e happy &quot;不过这都是过去的事了。&quot;  &#x2F;&#x2F;等价于show eileen happy</span><br><span class="line">    e @ happy &quot;虽然还挺有趣的。&quot;  &#x2F;&#x2F; &#96;@&#96;表示临时改变，此句之后变回去</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    &quot;我当然不会承认，上课的时候内容只是左耳进右耳出。&quot;  &#x2F;&#x2F;内心所想？或**旁白**？</span><br><span class="line">    </span><br><span class="line">    stop music</span><br><span class="line">    play sound &quot;effect.ogg&quot;  &#x2F;&#x2F;音效，不会循环播放</span><br><span class="line"></span><br><span class="line">    w &quot;你现在要回家了吗？要不要跟我一起走？&quot;</span><br><span class="line"></span><br><span class="line">    s &quot;当然！&quot;</span><br><span class="line">    </span><br><span class="line">    show sylvie green smile  &#x2F;&#x2F;标签为sylvie的图片，后两个为属性。忽略图片扩展名。</span><br><span class="line">    with dissolve  &#x2F;&#x2F;溶解</span><br><span class="line"></span><br><span class="line">    &quot;她把脸转向我，上面挂着微笑。她看起来兴致高昂。我觉得自己刚才的紧张情绪已经消散。&quot;</span><br><span class="line"></span><br><span class="line">    &quot;我得问问她！&quot;</span><br><span class="line"></span><br><span class="line">    m &quot;嗯呣……你是否可以……&quot;</span><br><span class="line"></span><br><span class="line">    m &quot;你是否可以做我的视觉小说画师？&quot;</span><br><span class="line"></span><br><span class="line">    show sylvie green surprised  &#x2F;&#x2F;同标签，将自动替换之前的，常用于表现角色表情变换</span><br><span class="line"></span><br><span class="line">    &quot;沉默。&quot;</span><br><span class="line">    </span><br><span class="line">    s &quot;我立刻去办！&quot;</span><br><span class="line"></span><br><span class="line">    hide sylvie  &#x2F;&#x2F;隐藏该图形，角色消失</span><br><span class="line">    pause 3.0  &#x2F;&#x2F;暂停3秒，不指定时间，则等待鼠标点击</span><br><span class="line">    </span><br><span class="line">    show sylvie green sad</span><br><span class="line">    </span><br><span class="line">    s &quot;你为什么那么熟练啊！&quot;</span><br><span class="line">    </span><br><span class="line">    show sylvie green smile at right  &#x2F;&#x2F;图像靠左。right等关键词可自定义。</span><br><span class="line">    </span><br><span class="line">menu:</span><br><span class="line"></span><br><span class="line">    &quot;你们都是我的翅膀！&quot;:</span><br><span class="line">        jump badend  &#x2F;&#x2F;可任一跳转到其他rpy文件中</span><br><span class="line"></span><br><span class="line">    &quot;我能有什么办法，不是我花心，是tm船裂了啊！&quot;:</span><br><span class="line">        jump book</span><br><span class="line">    </span><br><span class="line">label badend：</span><br><span class="line">	</span><br><span class="line">	$ wodouyao &#x3D; True  &#x2F;&#x2F;后宫选项被选中，赋值。$表示py语句。</span><br><span class="line">    </span><br><span class="line">    &quot;.:. Bad结局预定&quot;</span><br><span class="line"></span><br><span class="line">    return  &#x2F;&#x2F;结局</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">if wodouyao:</span><br><span class="line"></span><br><span class="line">    &quot;渣男死路一条&quot;  &#x2F;&#x2F;wodouyao为真</span><br><span class="line"></span><br><span class="line">else:</span><br><span class="line"></span><br><span class="line">    &quot;不选也是死路一条。&quot;  &#x2F;&#x2F;wodouyao为假</span><br></pre></td></tr></table></figure>
+
+<h2 id="Ren’Py游戏脚本详细"><a href="#Ren’Py游戏脚本详细" class="headerlink" title="Ren’Py游戏脚本详细"></a>Ren’Py游戏脚本详细</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">脚本</span><br><span class="line">├── 语句块(block)           #多行脚本构成</span><br><span class="line">|   ├── 各行脚本</span><br><span class="line">|   |   ├── 基本元素(element) </span><br><span class="line">|   |   ├── 基本元素(element)</span><br><span class="line">|   语句块(block)           #多行脚本构成</span><br><span class="line">|   └── 各行脚本            #核查证件上传类</span><br><span class="line">|   	└── 基本元素(element)</span><br></pre></td></tr></table></figure>
+
+<p>game目录下有多个<code>.rpy</code>文件组成。在Ren’Py启动时，会将<code>.rpy</code>文件编译为<code>.rpyc</code>文件。</p>
+<h3 id="python基础（略）"><a href="#python基础（略）" class="headerlink" title="python基础（略）"></a><a href="https://www.misaka10013.cn/2020/04/12/python%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" target="_blank" rel="noopener">python基础（略）</a></h3><h3 id="重要语句解释"><a href="#重要语句解释" class="headerlink" title="重要语句解释"></a>重要语句解释</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">label loop_start:  &#x2F;&#x2F;jump跳转</span><br><span class="line"></span><br><span class="line">    e &quot;哦，不！看起来我们陷入了一个无限循环之中。&quot;</span><br><span class="line"></span><br><span class="line">    jump loop_start</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">e &quot;首先，我们调用一个子程序(subroutine)。&quot;  &#x2F;&#x2F;call可带参</span><br><span class="line"></span><br><span class="line">call subroutine</span><br><span class="line"></span><br><span class="line">call subroutine(2)</span><br><span class="line"></span><br><span class="line">call expression &quot;subroutine&quot; pass (count&#x3D;3)</span><br><span class="line"></span><br><span class="line">label subroutine(count&#x3D;1):</span><br><span class="line"></span><br><span class="line">    e &quot;我来过这里 [count] 次了。&quot;</span><br><span class="line">    e &quot;接着，我们会返回到子程序(subroutine)。&quot;</span><br><span class="line"></span><br><span class="line">    return</span><br></pre></td></tr></table></figure>
+
+<h3 id="控制图像"><a href="#控制图像" class="headerlink" title="控制图像"></a>控制图像</h3><p>控制图像的四种语句：</p>
+<ul>
+<li>image - 定义一个新的图像(image)。</li>
+<li>show - 在图层上(layer)显示一个图像。</li>
+<li>scene -清空图层(layer)，并可选是否在那个图层上显示一个图像。</li>
+<li>hide - 将图层(layer)上的某个图像移除。</li>
+<li>with - 用于图像切换，降低图像变化的突兀感。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">image eileen happy &#x3D; &quot;eileen_happy.png&quot;</span><br><span class="line">image black &#x3D; &quot;#000&quot;</span><br><span class="line">image bg tiled &#x3D; LiveTile(&quot;tile.jpg&quot;)</span><br><span class="line"></span><br><span class="line">image eileen happy question &#x3D; VBox(</span><br><span class="line">    &quot;question.png&quot;,</span><br><span class="line">    &quot;eileen_happy.png&quot;,</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+
+<h3 id="控制菜单"><a href="#控制菜单" class="headerlink" title="控制菜单"></a>控制菜单</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">    &quot;向左&quot;:  &#x2F;&#x2F;选项</span><br><span class="line">        ...</span><br><span class="line">    &quot;向右&quot;:</span><br><span class="line">        ...</span><br><span class="line">    &quot;向前看&quot; if drank_tea:  &#x2F;&#x2F;值为真，则可选</span><br><span class="line">        ...</span><br></pre></td></tr></table></figure>
+
+<h1 id="GUI图形界面定制（暂略）"><a href="#GUI图形界面定制（暂略）" class="headerlink" title="GUI图形界面定制（暂略）"></a>GUI图形界面定制（暂略）</h1><h1 id="御坂游戏项目"><a href="#御坂游戏项目" class="headerlink" title="御坂游戏项目"></a>御坂游戏项目</h1><p>嘛，目前缺立绘、缺场景素材、缺剧本，抽时间吧，看6月前搞不搞得出来个短剧本GALgame demo。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+	<div>
+	
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	
+	</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
+          
+            <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+          
+            <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" rel="tag"># 游戏开发</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/3811606223.html" rel="next" title="python语言学习笔记">
+                <i class="fa fa-chevron-left"></i> python语言学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/p/2793924757.html" rel="prev" title="御坂影音作品分析（ing）">
+                御坂影音作品分析（ing） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Misaka10013</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">138</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/misaka10013" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:648106369@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/misaka10013" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/zhang-ze-hao-34" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.lmyoaoa.com/inn/" title="明猪の雪地" target="_blank">明猪の雪地</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.liuboyuan.fun/" title="风雨轩窗日暮光" target="_blank">风雨轩窗日暮光</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/ygjzs/" title="跌倒的小黄瓜" target="_blank">跌倒的小黄瓜</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yujie.pro/" title="夜灭の小窝" target="_blank">夜灭の小窝</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ren’Py作用"><span class="nav-number">1.</span> <span class="nav-text">Ren’Py作用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#脚本编辑"><span class="nav-number">2.</span> <span class="nav-text">脚本编辑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#script-rpy脚本"><span class="nav-number">2.1.</span> <span class="nav-text">script.rpy脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ren’Py游戏脚本详细"><span class="nav-number">2.2.</span> <span class="nav-text">Ren’Py游戏脚本详细</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#python基础（略）"><span class="nav-number">2.2.1.</span> <span class="nav-text">python基础（略）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重要语句解释"><span class="nav-number">2.2.2.</span> <span class="nav-text">重要语句解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制图像"><span class="nav-number">2.2.3.</span> <span class="nav-text">控制图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制菜单"><span class="nav-number">2.2.4.</span> <span class="nav-text">控制菜单</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GUI图形界面定制（暂略）"><span class="nav-number">3.</span> <span class="nav-text">GUI图形界面定制（暂略）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#御坂游戏项目"><span class="nav-number">4.</span> <span class="nav-text">御坂游戏项目</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">御坂</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">292k</span>
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.0</div>
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66531323";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+	  <script src="https://misaka10013.cn/live2d/autoload.js"></script>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  <script src="/js/src/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd9dd27873bbc9806622a',
+      clientSecret: '5f85636536b9c39ca882ae2b231b271e9d180e0a',
+      repo: 'misaka10013.github.io',
+      owner: 'misaka10013',
+      admin: ['misaka10013'],
+      id: location.pathname,
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>

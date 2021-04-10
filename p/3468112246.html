@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Misaka10013,misaka,御坂10013,御坂" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Misaka10013'blogs" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Misaka10013&#39;blogs">
+<meta property="og:url" content="https://misaka10013.cn/404.html">
+<meta property="og:site_name" content="Misaka10013&#39;blogs">
+<meta property="og:description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="article:published_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:modified_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:author" content="Misaka10013">
+<meta property="article:tag" content="misaka">
+<meta property="article:tag" content="misaka10013">
+<meta property="article:tag" content="御坂">
+<meta property="article:tag" content="御坂10013">
+<meta property="article:tag" content="御坂美琴">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://misaka10013.cn/404.html"/>
+
+
+
+
+
+  <title>go语言学习笔记 | Misaka10013'blogs</title>
+  
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Misaka10013'blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">御坂世界</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            Photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-download"></i> <br />
+            
+            other
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://misaka10013.cn/p/3468112246.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Misaka10013">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Misaka10013'blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">go语言学习笔记</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-12T13:10:35+08:00">2020-04-12</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">14k</span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="go语言基础知识"><a href="#go语言基础知识" class="headerlink" title="go语言基础知识"></a>go语言基础知识</h1><h2 id="go语言基础知识-1"><a href="#go语言基础知识-1" class="headerlink" title="go语言基础知识"></a>go语言基础知识</h2><p>基础于c，具有部署简单、并发号、执行性能好的特点。与java相比，没有类和继承，相比java更加高效，相比c更加简单易编译。go对多核心优化好，可让程序员调用硬件更多性能。在很多语法现象上有从c语言简化，同时为了降低歧义和程序员语言风格对代码功能的影响，对代码书写方式和工程文件结构等做了规定。</p>
+<h2 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">package main    &#x2F;&#x2F; 声明 main 包，main包是唯一的，是入口。</span><br><span class="line">import (</span><br><span class="line">    &quot;fmt&quot;       &#x2F;&#x2F; 导入 fmt 包，打印字符串是需要用到</span><br><span class="line">)</span><br><span class="line">func main() &#123;   &#x2F;&#x2F; 声明 main 主函数，所以函数以func开头。func 函数名 (参数列表) (返回值列表)</span><br><span class="line">    fmt.Println(&quot;Hello World!&quot;) &#x2F;&#x2F; 打印 Hello World!</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>go语言以包为管理单位，每个go源文件需要声明其所属包，一目录下同级文件属于同一个包。</p>
+<h1 id="数据类型和变量生成"><a href="#数据类型和变量生成" class="headerlink" title="数据类型和变量生成"></a>数据类型和变量生成</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li>bool  布尔</li>
+<li>string  字符串</li>
+<li>int、int8、int16、int32、int64  整型（分别8进制、16进制、32进制等）</li>
+<li>uint、uint8、uint16、uint32、uint64、uintptr</li>
+<li>byte // uint8 的别名</li>
+<li>float32、float64  实型</li>
+</ul>
+<h2 id="变量赋值方式"><a href="#变量赋值方式" class="headerlink" title="变量赋值方式"></a>变量赋值方式</h2><p><code>var name type</code> 变量声明方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var (  &#x2F;&#x2F;批量变量</span><br><span class="line">    a int &#x3D;3 &#x2F;&#x2F;不需要“；”</span><br><span class="line">    b string</span><br><span class="line">    c []float32</span><br><span class="line">    d func() bool</span><br><span class="line">    e struct &#123;</span><br><span class="line">        x int</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">a,s:&#x3D;1, &quot;abc&quot;&#x2F;&#x2F;简化申明和赋值</span><br><span class="line">c:&#x3D;a+a</span><br><span class="line">ptr :&#x3D; &amp;v  &#x2F;&#x2F;指针变量</span><br><span class="line">var a,b *int  &#x2F;&#x2F;指针变量</span><br><span class="line">var q [3]int &#x3D; [3]int&#123;1, 2, 3&#125;  &#x2F;&#x2F;数组同时赋值</span><br></pre></td></tr></table></figure>
+
+<p>全局变量在主函数之外进行声明。</p>
+<h1 id="GO语言容器"><a href="#GO语言容器" class="headerlink" title="GO语言容器"></a>GO语言容器</h1><h2 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var team [3]string</span><br><span class="line">team[0] &#x3D; &quot;hammer&quot;</span><br><span class="line">team[1] &#x3D; &quot;soldier&quot;</span><br><span class="line">team[2] &#x3D; &quot;mum&quot;</span><br><span class="line">for k, v :&#x3D; range team &#123;  &#x2F;&#x2F;k如计数器，从0开始。v作为桥梁，获取数组team的值</span><br><span class="line">    fmt.Println(k, v)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fmt.Println(team[1:2])  &#x2F;&#x2F;输出数组第二和第三个的内容。相当于生成切片。</span><br><span class="line">b :&#x3D; make([]int, 2, 10)  &#x2F;&#x2F;使用make函数，预分配10个内存空间，但使用2个元素</span><br><span class="line"></span><br><span class="line">var a []int</span><br><span class="line">a &#x3D; append(a, 1, 2, 3)  &#x2F;&#x2F; append追加多个元素, 手写解包方式。还有copy复制切片等</span><br></pre></td></tr></table></figure>
+
+<h2 id="map概念（python中的字典）"><a href="#map概念（python中的字典）" class="headerlink" title="map概念（python中的字典）"></a>map概念（python中的字典）</h2><p>map是一种特殊的数据结构，是由key（索引）和value（值）两个元素组合成的无序集合。map的容量是动态的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line">func main() &#123;</span><br><span class="line">    var mapLit map[string]int  &#x2F;&#x2F;分别是map名、map结合值中的key的类型以及map的值的类型</span><br><span class="line">    mapLit &#x3D; map[string]int&#123;&quot;one&quot;: 1, &quot;two&quot;: 2&#125;</span><br><span class="line">    mapCreated :&#x3D; make(map[string]int)</span><br><span class="line">    mapCreated[&quot;key1&quot;] &#x3D; 4.5</span><br><span class="line">    mapCreated[&quot;key2&quot;] &#x3D; 3.14159</span><br><span class="line">    fmt.Printf(&quot;Map literal at \&quot;one\&quot; is: %d\n&quot;, mapLit[&quot;one&quot;])</span><br><span class="line">    fmt.Printf(&quot;Map created at \&quot;key2\&quot; is: %f\n&quot;, mapCreated[&quot;key2&quot;])</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">scene :&#x3D; make(map[string]int)</span><br><span class="line">scene[&quot;route&quot;] &#x3D; 66</span><br><span class="line">scene[&quot;brazil&quot;] &#x3D; 4</span><br><span class="line">scene[&quot;china&quot;] &#x3D; 960</span><br><span class="line">delete(scene, &quot;brazil&quot;)  &#x2F;&#x2F;删除一组值</span><br><span class="line">for k, v :&#x3D; range scene &#123;  &#x2F;&#x2F;遍历</span><br><span class="line">    fmt.Println(k, v)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="go语言程序结构"><a href="#go语言程序结构" class="headerlink" title="go语言程序结构"></a>go语言程序结构</h1><h2 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">if condition1 &#123;</span><br><span class="line">    &#x2F;&#x2F; do something</span><br><span class="line">&#125; else if condition2 &#123;</span><br><span class="line">    &#x2F;&#x2F; do something else</span><br><span class="line">&#125;else &#123;</span><br><span class="line">    &#x2F;&#x2F; catch-all or default</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var s &#x3D; &quot;hello&quot;</span><br><span class="line">switch &#123;</span><br><span class="line">case s &#x3D;&#x3D; &quot;hello&quot;:  &#x2F;&#x2F;case 判断表达式</span><br><span class="line">    fmt.Println(&quot;hello&quot;)</span><br><span class="line">    fallthrough</span><br><span class="line">case s !&#x3D; &quot;world&quot;:</span><br><span class="line">    fmt.Println(&quot;world&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p>只支持for循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sum :&#x3D; 0</span><br><span class="line">for i :&#x3D; 0; i &lt; 10; i++ &#123;</span><br><span class="line">    sum +&#x3D; i</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for key, val :&#x3D; range coll &#123;  &#x2F;&#x2F;常用语遍历的循环模式，其中key作为递增。val是只读传递数值</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>break</code>退出本次循环。 <code>goto</code>可以直接跳出多层循环到标签处。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">goto breakHere</span><br><span class="line"></span><br><span class="line">breakHere:</span><br><span class="line">    fmt.Println(&quot;done&quot;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="一般函数声明"><a href="#一般函数声明" class="headerlink" title="一般函数声明"></a>一般函数声明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">func typedTwoValues() (int, int) &#123;</span><br><span class="line">    return 1, 2</span><br><span class="line">&#125;</span><br><span class="line">func main() &#123;</span><br><span class="line">    a, b :&#x3D; typedTwoValues()</span><br><span class="line">    fmt.Println(a, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import (</span><br><span class="line">    &quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line">func fire() &#123;</span><br><span class="line">    fmt.Println(&quot;fire&quot;)</span><br><span class="line">&#125;</span><br><span class="line">func main() &#123;</span><br><span class="line">    var f func()  &#x2F;&#x2F;将func函数当做一种类型，定义一个f变量</span><br><span class="line">    f &#x3D; fire  &#x2F;&#x2F;调用变量，相当于无传入的函数</span><br><span class="line">    f()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1><p>go语言没有类的概念,结构体与c语言类似。（不过我感觉c和go的结构体和java的类挺相似，因为都可以属性继承等。）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">type Point struct &#123;  &#x2F;&#x2F;结构体定义</span><br><span class="line">    X int</span><br><span class="line">    Y string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var p Point  &#x2F;&#x2F;实例化</span><br><span class="line">p.X &#x3D; 10  &#x2F;&#x2F;调用</span><br></pre></td></tr></table></figure>
+
+<h1 id="接口概念"><a href="#接口概念" class="headerlink" title="接口概念"></a>接口概念</h1><p>虽然go没有类和继承的概念，但其通过接口的概念实现面对对象的特性（一种抽象的存在）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type writer interface&#123;  &#x2F;&#x2F;定义接口名，interface是定义接口关键词。接口类型由数个方法构成，默认在接口名后面加er以便于区分</span><br><span class="line">    Write([]byte) error</span><br><span class="line">    方法名（参数列表） 返回值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+	<div>
+	
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	
+	</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
+          
+            <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+          
+            <a href="/tags/go%E8%AF%AD%E8%A8%80/" rel="tag"># go语言</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/1369843933.html" rel="next" title="java语言学习笔记">
+                <i class="fa fa-chevron-left"></i> java语言学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/p/3811606223.html" rel="prev" title="python语言学习笔记">
+                python语言学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Misaka10013</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">138</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/misaka10013" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:648106369@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/misaka10013" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/zhang-ze-hao-34" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.lmyoaoa.com/inn/" title="明猪の雪地" target="_blank">明猪の雪地</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.liuboyuan.fun/" title="风雨轩窗日暮光" target="_blank">风雨轩窗日暮光</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/ygjzs/" title="跌倒的小黄瓜" target="_blank">跌倒的小黄瓜</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yujie.pro/" title="夜灭の小窝" target="_blank">夜灭の小窝</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#go语言基础知识"><span class="nav-number">1.</span> <span class="nav-text">go语言基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#go语言基础知识-1"><span class="nav-number">1.1.</span> <span class="nav-text">go语言基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hello-world"><span class="nav-number">1.2.</span> <span class="nav-text">hello world</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型和变量生成"><span class="nav-number">2.</span> <span class="nav-text">数据类型和变量生成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量赋值方式"><span class="nav-number">2.2.</span> <span class="nav-text">变量赋值方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GO语言容器"><span class="nav-number">3.</span> <span class="nav-text">GO语言容器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组遍历"><span class="nav-number">3.1.</span> <span class="nav-text">数组遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切片"><span class="nav-number">3.2.</span> <span class="nav-text">切片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map概念（python中的字典）"><span class="nav-number">3.3.</span> <span class="nav-text">map概念（python中的字典）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#go语言程序结构"><span class="nav-number">4.</span> <span class="nav-text">go语言程序结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#判断"><span class="nav-number">4.1.</span> <span class="nav-text">判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环"><span class="nav-number">4.2.</span> <span class="nav-text">循环</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">5.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一般函数声明"><span class="nav-number">5.1.</span> <span class="nav-text">一般函数声明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结构体"><span class="nav-number">6.</span> <span class="nav-text">结构体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口概念"><span class="nav-number">7.</span> <span class="nav-text">接口概念</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">御坂</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">292k</span>
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.0</div>
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66531323";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+	  <script src="https://misaka10013.cn/live2d/autoload.js"></script>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  <script src="/js/src/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd9dd27873bbc9806622a',
+      clientSecret: '5f85636536b9c39ca882ae2b231b271e9d180e0a',
+      repo: 'misaka10013.github.io',
+      owner: 'misaka10013',
+      admin: ['misaka10013'],
+      id: location.pathname,
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>

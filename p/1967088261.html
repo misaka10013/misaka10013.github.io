@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Misaka10013,misaka,御坂10013,御坂" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Misaka10013'blogs" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Misaka10013&#39;blogs">
+<meta property="og:url" content="https://misaka10013.cn/404.html">
+<meta property="og:site_name" content="Misaka10013&#39;blogs">
+<meta property="og:description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="article:published_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:modified_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:author" content="Misaka10013">
+<meta property="article:tag" content="misaka">
+<meta property="article:tag" content="misaka10013">
+<meta property="article:tag" content="御坂">
+<meta property="article:tag" content="御坂10013">
+<meta property="article:tag" content="御坂美琴">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://misaka10013.cn/404.html"/>
+
+
+
+
+
+  <title>hexo利用coding自动化持续集成云端部署多平台 | Misaka10013'blogs</title>
+  
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Misaka10013'blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">御坂世界</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            Photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-download"></i> <br />
+            
+            other
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://misaka10013.cn/p/1967088261.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Misaka10013">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Misaka10013'blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">hexo利用coding自动化持续集成云端部署多平台</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-27T17:39:01+08:00">2020-09-27</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">9.7k</span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="hexo利用coding自动化持续集成云端部署多平台"><a href="#hexo利用coding自动化持续集成云端部署多平台" class="headerlink" title="hexo利用coding自动化持续集成云端部署多平台"></a>hexo利用coding自动化持续集成云端部署多平台</h1><h2 id="话谈博客网站维护的感慨"><a href="#话谈博客网站维护的感慨" class="headerlink" title="话谈博客网站维护的感慨"></a>话谈博客网站维护的感慨</h2><p>事实上大概小半年前因github难受的访问速度，我开始着手部署coding和github双平台的时候我就在coding那边看到这个功能了。coding上面更新还是蛮快的，不过有些好功能在消失，比如免费的静态页面部署（跑去腾讯云那边商业化收费去了），也有些复杂的功能在上线，不再仅仅是一个代码托管的地方，还可以完成项目协同、直接部署等功能。</p>
+<p>前阵子我和一个朋友讨论博客网站的时候也谈到了网站维护的问题。他使用wrodpress搭建的博客不知道怎么蹦了。嘛，我曾经大一的使用使用wrodpress、Zblog等搭建的博客也是，其实主要是我们这类总是想折腾，时不时就去改动，而这类包含后端的博客程序总是给人一种不太经得起折腾的感觉（或者我们折腾的方式不太对？），各种魔改功能、自定义页面，最后博客越玩越卡，问题越来越多，维护起来就很烦心了。最后转用简书、新浪博客等一阵子，又被各种审核、封文搞得心情爆炸。所以后面我这边改用hexo这种无后端，纯静态的博客之后觉得很省心，时不时想折腾几下也很简单，备份几下主要的配置文件历史就可以了，就算被搞爆了，没事，文章就算md文件，拉一下配置文件马上满血复活，<strong>很耐折腾！</strong></p>
+<p>不过和朋友的讨论其实让我发觉但凡涉及后端的东西，就真是麻烦，因为一旦自己要改自定义的内容，就需要从后端代码中去改，一旦改出问题，整个网站里面出大问题。即使轻后端的hexo，在我部署在surface上后，也需要配置node.js环境、git工具等，自己改动的各种小功能live2D、中文标题链接优化、标题表情、评论区等等这些都是从后端代码中去改动的，一旦某个工具失效或者电脑出问题了，文章虽然没事，博客样式什么的很快恢复，但这些后端代码中的改动就很麻烦了。最主要的是单端使用这点的确也很限制使用感受，所以让我前阵子一直很期待印象笔记的markdown写作功能，毕竟就可以使用印象笔记在笔记本、电脑、手机上多端写作markdown文章之后，有空在使用安装hexo的电脑上传博客就行了。<br>然而事不随人愿，<strong>印象笔记那个markdown写作就是个垃圾！</strong>不支持多端使用，卡得一批，有时候还会出现无法复制的bug。最重要的是印象笔记markdown内容是非文件格式，导入导出非常麻烦，有时候想对多个文件中的的相同内容如对象存储访问链接进行修改，根本没法修改。这要是文件，一个脚本就多个文件内字符编辑了。</p>
+<p>所以基于对本地部署的hexo环境的担忧和对多端写作的不便，如何让hexo上云，就成为了一个重要的需求。</p>
+<h2 id="初识自动化云端集成部署"><a href="#初识自动化云端集成部署" class="headerlink" title="初识自动化云端集成部署"></a>初识自动化云端集成部署</h2><p>在前阵子，我查找hexo多端编辑的时候就看到了在云端架设hexo的方法，比如弄个服务器，安装hexo环境和工具，不过这成本有点高，稳定性难说。有些玩出花的方法，代码备份云端，拉取下拉编译又上传源码什么的操作。最后我还是觉得利用CI自动化部署的方案很不错。<strong>网上主流的方案是使用Travis CI+Github实现。</strong></p>
+<p>要描述这个实现的过程的话，其实就是把你的未编译的源码放到coding、github之类的云端仓库去，设置一个触发CI的条件，比如仓库文件更新之类的，当触发CI之后就会在云端根据你配置Jenkinsfile文件这种脚本，自动化的创建一个虚拟环境并执行你预设的命令对你的仓库代码进行编译运行。用在hexo+coding+CI上，可以这样理解。</p>
+<p>把必须的hexo源码上传coding云端仓库中，触发CI运行一台虚拟机，加载node.js环境以及我们的hexo的依赖文件等，并在虚拟机中执行<code>hexo deploy</code>进行部署到你的静态页面托管去。</p>
+<p>当然具体实现起来因为大家情况不一，其实方法很多样（又能玩出来花）。比如有的人是使用CI执行<code>hexo g</code>渲染出来静态页面文件后，根据Jenkinsfile文件中配置的Git上传到指定的仓库托管（如github支持的静态托管页面仓库，coding这边目前已逐渐不支持）。使用hexo中的<code>hexo deploy</code>生成的话，git这个过程相当于是在hexo的配置文件中配置的，由于hexo支持还是挺广泛的，所以可以在hexo生成之后通过hexo的依赖支持上传静态页面到腾讯云对象存储等其他支持静态页面托管的产品上面去。要说的话，我就挺喜欢用对象存储，速度挺快的。因为github受墙的影响，真心快不起来，而coding的静态页面业务受监管或者产品策略问题，目前也是放在镜外的，前阵子可能是因为腾讯云的轻量应用服务器上线，很多人使用腾讯云境外轻量服务器搭建梯子，导致腾讯云一些境外服务器IP被墙了，连我部署在coding上的静态网站也备受影响。目前我就直接搭建了coding、github和腾讯云对象存储三端静态页面托管，每次我这边执行hexo部署，就会将渲染的静态页面部署到这三端上面去，后面考虑还准备利用腾讯云的对象存储对接CDN，让网站访问速度更加。</p>
+<h2 id="部署方法"><a href="#部署方法" class="headerlink" title="部署方法"></a>部署方法</h2><p>上面长篇大论讨论了些需求背景和原理，这里我们来讨论一下26日弄了半天遇到的各种坑。</p>
+<p>由于我们这边是部署在coding上面，所以就以这边的设置作为参考，想使用Travis CI+Github方案的话，可以参考文后的以下其他技术讨论参考方法。</p>
+<h3 id="熟悉git"><a href="#熟悉git" class="headerlink" title="熟悉git"></a>熟悉git</h3><p>首先在这样部署前最好先熟悉git工具，我上午就折腾在这上面了，上传hexo源码到仓库，最后渲染的文件总是少了些部分。排查了好一会，才发现hexo和其主题NEXT也是其他使用者在仓库中写的，其中有他们配置的<code>.gitignore</code>文件，这个文件在执行git的过程中会让git工具忽视文件中备注的一些文件夹。</p>
+<p>git工具使用过程很简单，网上下一个git软件安装。<br>新建个本地仓库文件夹，进入文件夹右键选择git上传工具，执行<code>git init</code>初始化命令就可以（这时候文件夹其实被创建了一个隐形的<code>.git</code>文件夹）。</p>
+<p>本地仓库建好了，如果是需要本地仓库放进来代码并上传云端建好的项目仓库，那就：</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https:&#x2F;&#x2F;云端项目仓链接.git  &#x2F;&#x2F;关联仓库</span><br><span class="line">git push -u origin master  &#x2F;&#x2F;推送本地上去主仓库</span><br></pre></td></tr></table></figure>
+<p>如是私人仓库，会要求输入密码，也可直接链接中附带密码访问，或者在仓库端和使用的本地端创建匹配秘钥，这样连密码都不用输入了。<br>如果本地仓没内容，需要把云端的仓库内容拉下来，就：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;云端项目仓链接.git</span><br></pre></td></tr></table></figure>
+<p>那么如何git上传呢</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status   &#x2F;&#x2F;检查文件状态</span><br><span class="line">git add -A  &#x2F;&#x2F;添加变化到版本暂存，平时单个文件 &#96;git add 文件名&#96;</span><br><span class="line">git commit -a -m&quot;first commit&quot;  &#x2F;&#x2F;本次版本备注信息</span><br><span class="line">git push  &#x2F;&#x2F;推送云端</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>直接复制粘贴一键多连操作<strong>（大雾,这个一粘贴就执行了，注意哈）</strong>。当然，真正使用时最好<code>git push</code>前冷静下看下，毕竟一<code>git push</code>，那云端那个就被本地端覆盖了，你要是不小心拿本地一个空仓库推送了云端，那就祈祷云端有历史版本吧。<br>其他有用但不常用的命令集可参考以下：</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin &#x2F;&#x2F;删除远端仓库关联</span><br><span class="line">git remote -v &#x2F;&#x2F;查看已关联远端库</span><br><span class="line">git log &#x2F;&#x2F;查看记录</span><br><span class="line">git reset --hard HEAD^   &#x2F;&#x2F;回退版本 HEAD HEAD^  HEAD^^ HEAD~100</span><br><span class="line">cat filename&#x2F;&#x2F;查看文件内容</span><br><span class="line">git checkout -- readme.txt。&#x2F;&#x2F;放弃工作区中的内容</span><br><span class="line">git rm filename &#x2F;&#x2F;删除文件 </span><br><span class="line">git branch  &#x2F;&#x2F;查看分支</span><br><span class="line">git branch &lt;name&gt; &#x2F;&#x2F;创建分支</span><br><span class="line">git checkout &lt;name&gt; &#x2F;&#x2F;切换分支</span><br><span class="line">git checkout -b &lt;name&gt; &#x2F;&#x2F;创建+切换分支  </span><br><span class="line">git merge &lt;name&gt; &#x2F;&#x2F;合并某分支到当前分支</span><br><span class="line">git branch -d &lt;name&gt; &lt;name&gt; &#x2F;&#x2F;删除分支</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>hexo和其主题的编写者肯定是为了渲染出来网页页面后上传的时候忽略到不必要的文件，然而我们现在需要将源码完全git到仓库，有<code>.gitignore</code>文件这个文件就导致一些源码文件夹没上传上去，而且会导致这个文件所在的文件夹一一个文件的形式存在在仓库，而并非将整个文件夹上传。另外，那个隐藏的最后最好在文件夹显示中打开显示隐藏文件，这些源码中别人隐藏的<code>.git</code>文件夹对我们上传是有影响的<code>.git</code>文件夹包含别人仓库的git信息，也会影响我们git源码，所以如果你的hexo源码已经从各处下过一些插件或者其他源码之类的内容，记得查看一下是否有隐藏的<code>.git</code>文件夹，及时删除掉。更坑的是即使删除这些文件，重新git，仍然无法解决仓库中显示为一个文件夹同名的文件的情况。这时候只有把这个整个本地文件夹全删除掉，git这个文件夹被删除的信息上云端，让云端仓库那个同名的文件消失，再重新复制文件夹进来，并检查删除完了<code>.gitignore</code>文件和隐藏的<code>.git</code>文件夹，才能正常的上传。</p>
+<h3 id="CI的git"><a href="#CI的git" class="headerlink" title="CI的git"></a>CI的git</h3><p>由于源码我们要设置上传到其他仓库或者对象存储的，所以源码中会有我们的git链接、用户名、密码等信息，这时候我们的源码最好放在一个私人仓库，而由于我这边是要将源码渲染出来的页面git到coding和github的仓库静态页面托管以及对象存储，这其中就涉及到如coding仓库秘钥的获取问题，要不然你配置好CI，最后执行的时候虚拟机只能告诉你“请检查权限设置，我莫得权限，莫法上传”。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">github免密访问: https:&#x2F;&#x2F;用户名:密码@github.com&#x2F;项目仓库名.git</span><br><span class="line">coding: https:&#x2F;&#x2F;访问令牌用户名:秘钥@e.coding.net&#x2F;项目仓库名.git</span><br></pre></td></tr></table></figure>
+<p>秘钥权限之类的我这就略过了，百度一下就有。对象存储也是，百度有。<br>这个git链接的话，看一下，哪里是外部访问私有仓，哪里就这样写，且写这个的配置文件请不要放在公有仓去。</p>
+<p>之后可在coding构建和部署中去创建集成任务。如果你没有看见构建和部署，请在coding账号下去开启该功能。</p>
+<p>新建构建任务主要也就<strong>代码源、代码仓库、使用哪个Jenkinsfile文件配置脚本</strong>这几个关键信息。具体的配置内容coding都给了一些模板，脚本中还可以设置<code>env.GIT_BUILD_REF</code>之类的环境变量等，用于一些变化的场景比较有用，这些如何使用可以看说明文档。</p>
+<p>我的构建计划就那点内容</p>
+<blockquote>
+<p>pipeline {<br>  agent any  //环境，可以指定，比如node环境，agent内容可以写  label <code>node-10</code><br>  stages {<br>      stage(‘构建’) {  //这相当于每个大环境，可以自定义很多环境<br>        steps {<br>          echo ‘构建中…’<br>          sh ‘go version’<br>          sh ‘node -v’  //查看版本信息<br>          sh ‘git clone https://仓库链接.git .’<br>          sh ‘ls -a’<br>          sh ‘npm install -g hexo-cli’<br>          sh ‘npm install hexo –save’  //安装hexo基本内容<br>          sh ‘npm install hexo-generator-archive –save’<br>          sh ‘npm install hexo-generator-sitemap’<br>          sh ‘npm install hexo-generator-baidu-sitemap’<br>          sh ‘npm install hexo-abbrlink –save’  //一些自己加的功能需要的依赖，否则自己改了的一些功能可能生成异常<br>          echo ‘构建完成.’<br>        }<br>      }<br>      stage(‘测试’) {<br>        steps {<br>          echo ‘单元测试中…’<br>          sh ‘hexo clean’<br>          sh ‘hexo g’<br>          echo ‘单元测试完成.’<br>        }<br>      }<br>      stage(‘部署’) {<br>        steps {<br>          echo ‘部署中…’<br>          // sh ‘npm install hexo-deployer-git –save’<br>          sh ‘hexo deploy’<br>          echo ‘部署完成’<br>        }<br>      }<br>    }<br>  }</p>
+</blockquote>
+<p>触发方式在集成部署的选项设置中设置就行了。如果出问题反复查看报错信息排查，基本都能找到原因修复。</p>
+<h1 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h1><p><a href="https://www.cnblogs.com/antmoe/p/12287711.html" target="_blank" rel="noopener">Hexo+coding实现自动化部署</a><br><a href="https://urabas.com/2019/03/11/hexo-for-tencent-cos/" target="_blank" rel="noopener">腾讯对象存储COS搭建Hexo博客</a><br><a href="https://blog.csdn.net/jave_f/article/details/80290748?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param" target="_blank" rel="noopener">基于Travis CI实现Hexo在Github和Coding的同步自动化部署</a><br><a href="https://www.cnblogs.com/codingdevops/p/10319837.html" target="_blank" rel="noopener">使用 CODING 进行 Hexo 项目的持续集成</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+	<div>
+	
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	
+	</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客</a>
+          
+            <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+          
+            <a href="/tags/%E4%B8%8A%E4%BA%91/" rel="tag"># 上云</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/3043907213.html" rel="next" title="御坂可视化数据库需求方案">
+                <i class="fa fa-chevron-left"></i> 御坂可视化数据库需求方案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/p/931352990.html" rel="prev" title="群星世界">
+                群星世界 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Misaka10013</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">138</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/misaka10013" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:648106369@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/misaka10013" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/zhang-ze-hao-34" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.lmyoaoa.com/inn/" title="明猪の雪地" target="_blank">明猪の雪地</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.liuboyuan.fun/" title="风雨轩窗日暮光" target="_blank">风雨轩窗日暮光</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/ygjzs/" title="跌倒的小黄瓜" target="_blank">跌倒的小黄瓜</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yujie.pro/" title="夜灭の小窝" target="_blank">夜灭の小窝</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo利用coding自动化持续集成云端部署多平台"><span class="nav-number">1.</span> <span class="nav-text">hexo利用coding自动化持续集成云端部署多平台</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#话谈博客网站维护的感慨"><span class="nav-number">1.1.</span> <span class="nav-text">话谈博客网站维护的感慨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初识自动化云端集成部署"><span class="nav-number">1.2.</span> <span class="nav-text">初识自动化云端集成部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署方法"><span class="nav-number">1.3.</span> <span class="nav-text">部署方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#熟悉git"><span class="nav-number">1.3.1.</span> <span class="nav-text">熟悉git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CI的git"><span class="nav-number">1.3.2.</span> <span class="nav-text">CI的git</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章："><span class="nav-number">2.</span> <span class="nav-text">参考文章：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">御坂</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">292k</span>
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.0</div>
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66531323";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+	  <script src="https://misaka10013.cn/live2d/autoload.js"></script>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  <script src="/js/src/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd9dd27873bbc9806622a',
+      clientSecret: '5f85636536b9c39ca882ae2b231b271e9d180e0a',
+      repo: 'misaka10013.github.io',
+      owner: 'misaka10013',
+      admin: ['misaka10013'],
+      id: location.pathname,
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Misaka10013,misaka,御坂10013,御坂" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Misaka10013'blogs" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Misaka10013&#39;blogs">
+<meta property="og:url" content="https://misaka10013.cn/404.html">
+<meta property="og:site_name" content="Misaka10013&#39;blogs">
+<meta property="og:description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="article:published_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:modified_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:author" content="Misaka10013">
+<meta property="article:tag" content="misaka">
+<meta property="article:tag" content="misaka10013">
+<meta property="article:tag" content="御坂">
+<meta property="article:tag" content="御坂10013">
+<meta property="article:tag" content="御坂美琴">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://misaka10013.cn/404.html"/>
+
+
+
+
+
+  <title>python语言学习笔记 | Misaka10013'blogs</title>
+  
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Misaka10013'blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">御坂世界</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            Photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-download"></i> <br />
+            
+            other
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://misaka10013.cn/p/3811606223.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Misaka10013">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Misaka10013'blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">python语言学习笔记</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-12T16:30:35+08:00">2020-04-12</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">13k</span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="python语言基础知识"><a href="#python语言基础知识" class="headerlink" title="python语言基础知识"></a>python语言基础知识</h1><h2 id="python语言基础知识-1"><a href="#python语言基础知识-1" class="headerlink" title="python语言基础知识"></a>python语言基础知识</h2><p>python是一种极简、开源，面向对象，有着丰富类库（模块）的语言。</p>
+<p><em>使用编译器将自身等效转换成机器语言的高级语言，通常称为编译型语言；而使用解释器将自身转换成机器语言的高级语言，称为解释型语言，Python 就是解释型编程语言的一种。</em>c语言、c++、汇编等需要一次性把所以源代码转换为机器码交给计算机使用，这就是编译型语言，需要编译器；而python、js、php、shell等可以一边执行一边转换，不生成可执行程序，为解释型语言，由解释器不断解释。</p>
+<p><strong>编译型</strong>产生的程序具有“一次编译，无限次使用”特点，但其源码和执行程序却无法跨平台，需要按不同平台另行修改源码。<br><strong>解释型</strong>则需要每次执行的时候转换源码，所以效率低，常应用于应用层面（网站开发、批处理、小工具）。因为解释型语言需要依靠源代码和解释器，所以就特别需要开发环境，也正是因为解释型语言需要依靠源码执行，所以都是开源的，而且具备跨平台的能力。</p>
+<p>python由ABC语言发展而来，其可通过库，调用其他语言制作的模块（大部分为c和c++的），由此被称为“胶水”语言。其主要用于web开发、自动化运维、人工智能、网络爬虫、科学计算等方向，另外由于python可调用c++编写的图形模块，也可用于开发游戏。</p>
+<h2 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h2><p><code>print(&quot;hello world&quot;)</code>  //显然，作为解释型语言，其解释器包含了大量的各种方法的库文件，也就不用调入头文件等内容。之用用print函数输出</p>
+<h1 id="数据类型及运算符号"><a href="#数据类型及运算符号" class="headerlink" title="数据类型及运算符号"></a>数据类型及运算符号</h1><p>？。赋什么值，自动匹配该类型。支持如c语言那样，在print中使用格式化输出（%d、%i之类）以及转义字符。运算上还多了个<code>**</code>代表幂次方计算。如2**4，表示2的四次方。</p>
+<p>需要注意逻辑运算符不同，而是and、or、not……</p>
+<p><code>max = a if a&gt;b else b</code> 三目运算。与c语言对比<code>表达式1 ? 表达式2 : 表达式3;</code>，显然含义更加明确。</p>
+<p>对于数据集合，python中由列表(list)、元组(tuple)、字典(dict)和集合(set)等方式。其会在内存中占用一块连续的内存。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D;[&quot;http:&#x2F;&#x2F;c.biancheng.net&#x2F;python&#x2F;&quot;, 1, [2,3,4] , 3.0]  &#x2F;&#x2F;列表可存储任一形式数据</span><br><span class="line"> </span><br><span class="line">tuple1 &#x3D; (&#39;Python&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;JavaScript&#39;)  &#x2F;&#x2F;元组，创建后不可修改内容（常量集合？）</span><br><span class="line">dict1 &#x3D; &#123;&#39;a&#39;:100, &#39;b&#39;:42, &#39;c&#39;:9&#125;  &#x2F;&#x2F;字典，无序，映射</span><br><span class="line">range1 &#x3D; range(1, 6)  &#x2F;&#x2F;区间</span><br><span class="line">list1 &#x3D; list(tuple1)  &#x2F;&#x2F;列表list函数，将一切即可转化为列表</span><br><span class="line">print(list1)  &#x2F;&#x2F;输出列表</span><br><span class="line">print(list1[1])  &#x2F;&#x2F;访问第二个元素</span><br><span class="line">del list1  &#x2F;&#x2F;删除列表，python自动回收内存，可删除某个元素或某段元素</span><br><span class="line">list1.append(&#39;a&#39;)  &#x2F;&#x2F;添加元素（）可任意元素。extend()逐个添加、insert(位置,内容)插入、</span><br><span class="line">list1.index()  &#x2F;&#x2F;查询列表指定元素，可指定查询范围。</span><br></pre></td></tr></table></figure>
+
+<h1 id="python流程控制（略）"><a href="#python流程控制（略）" class="headerlink" title="python流程控制（略）"></a>python流程控制（略）</h1><h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;计算 1+2+...+100 的结果为：&quot;) </span><br><span class="line">result &#x3D; 0</span><br><span class="line">for i in range(101):  &#x2F;&#x2F;逐个获取从 1 到 100 这些值，并做累加操作</span><br><span class="line">    result +&#x3D; i  &#x2F;&#x2F;range生成一系列连续整数</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def my_len(str):  &#x2F;&#x2F;自定义 len() 函数</span><br><span class="line">	&#39;&#39;&#39;</span><br><span class="line">	这里是说明文档</span><br><span class="line">	&#39;&#39;&#39;</span><br><span class="line">    length &#x3D; 0</span><br><span class="line">    for c in str:  &#x2F;&#x2F;一个一个字符传递给c</span><br><span class="line">       length &#x3D; length + 1</span><br><span class="line">    return length</span><br><span class="line">length &#x3D; my_len(&quot;http:&#x2F;&#x2F;c.biancheng.net&#x2F;python&#x2F;&quot;)</span><br><span class="line">print(length)</span><br><span class="line">\#print(my_len.__doc__)  &#x2F;&#x2F;调用函数说明文档，显示给使用者</span><br></pre></td></tr></table></figure>
+
+<h2 id="值得注意"><a href="#值得注意" class="headerlink" title="值得注意"></a>值得注意</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def add(a,b):</span><br><span class="line">    c &#x3D; a + b</span><br><span class="line">    return c</span><br><span class="line">c &#x3D; add(3,4)</span><br><span class="line">print(c)  &#x2F;&#x2F;这样调用函数返回值也可以调用到函数流程。注意</span><br><span class="line">print(add(3,4))</span><br></pre></td></tr></table></figure>
+
+<p>另外，函数内部还可以定义局部函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">def outdef ():  &#x2F;&#x2F;全局函数</span><br><span class="line">    def indef():  &#x2F;&#x2F;定义局部函数</span><br><span class="line">        print(&quot;调用局部函数&quot;)</span><br><span class="line">    return indef</span><br><span class="line">new_indef &#x3D; outdef()  &#x2F;&#x2F;将内部局部函数通过调用全局的方式放出来</span><br><span class="line">new_indef()  &#x2F;&#x2F;现在可以在外部调用了。需要注意局部和外部函数之间的同名变量可能会因为遮蔽而报错</span><br><span class="line"></span><br><span class="line">def nth_power(exponent):  &#x2F;&#x2F;#闭包函数，其中 exponent 称为自由变量。这类内部函数闭包让递归镶套函数书写可读性更佳。（并不觉得）</span><br><span class="line">    def exponent_of(base):</span><br><span class="line">        return base ** exponent</span><br><span class="line">    return exponent_of  &#x2F;&#x2F;返回值是 exponent_of 函数</span><br><span class="line">square &#x3D; nth_power(2)  &#x2F;&#x2F;计算一个数的平方，外部函数，值放入exponent</span><br><span class="line">cube &#x3D; nth_power(3)  &#x2F;&#x2F;计算一个数的立方</span><br><span class="line">print(square(2))   &#x2F;&#x2F;通过调用返回值，调用内部的函数，值以base放入。计算 2 的平方</span><br><span class="line">print(cube(2))  &#x2F;&#x2F;计算 2 的立方</span><br></pre></td></tr></table></figure>
+
+<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class CLanguage :</span><br><span class="line">    name &#x3D; &quot;C语言中文网&quot;  &#x2F;&#x2F;# 下面定义了2个类变量</span><br><span class="line">    add &#x3D; &quot;http:&#x2F;&#x2F;c.biancheng.net&quot;</span><br><span class="line">    def say(self, content):  &#x2F;&#x2F;下面定义了一个say实例方法</span><br><span class="line">        print(content)</span><br><span class="line">print(CLanguage.name)  &#x2F;&#x2F;使用类名直接调用</span><br><span class="line">print(CLanguage.add)</span><br><span class="line">CLanguage.name &#x3D; &quot;Python教程&quot;  &#x2F;&#x2F;修改类变量的值</span><br><span class="line">CLanguage.add &#x3D; &quot;http:&#x2F;&#x2F;c.biancheng.net&#x2F;python&quot;</span><br><span class="line">print(CLanguage.name)</span><br><span class="line">print(CLanguage.add)</span><br></pre></td></tr></table></figure>
+<p>越看越像某结构体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class CLanguage:</span><br><span class="line">    def info(self):</span><br><span class="line">        print(self,&quot;正在学 Python&quot;)</span><br><span class="line">CLanguage.info(&quot;zhangsan&quot;)  &#x2F;&#x2F;通过类名直接调用实例方法。这里传入值给了self。</span><br></pre></td></tr></table></figure>
+
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class CLanguage :  &#x2F;&#x2F;创建类</span><br><span class="line">    def setname(self, name):  &#x2F;&#x2F;写名方法</span><br><span class="line">        if len(name) &lt; 3:</span><br><span class="line">            raise ValueError(&#39;名称长度必须大于3！&#39;)</span><br><span class="line">        self.__name &#x3D; name</span><br><span class="line">    def getname(self):  &#x2F;&#x2F;读名方法</span><br><span class="line">        return self.__name  &#x2F;&#x2F;name私有化</span><br><span class="line">    name &#x3D; property(getname, setname)</span><br><span class="line">    def setadd(self, add):  &#x2F;&#x2F;写网址方法</span><br><span class="line">        if add.startswith(&quot;http:&#x2F;&#x2F;&quot;):  &#x2F;&#x2F;限制方法</span><br><span class="line">            self.__add &#x3D; add</span><br><span class="line">        else:</span><br><span class="line">            raise ValueError(&#39;地址必须以 http:&#x2F;&#x2F; 开头&#39;) </span><br><span class="line">    def getadd(self):</span><br><span class="line">        return self.__add</span><br><span class="line">    add &#x3D; property(getadd, setadd)</span><br><span class="line">    def __display(self):  &#x2F;&#x2F;定义个私有方法。包括了两个封装量</span><br><span class="line">        print(self.__name,self.__add)</span><br><span class="line">clang &#x3D; CLanguage()  &#x2F;&#x2F;为类创建实例</span><br><span class="line">clang.name &#x3D; &quot;C语言中文网&quot;</span><br><span class="line">clang.add &#x3D; &quot;http:&#x2F;&#x2F;c.biancheng.net&quot;</span><br><span class="line">print(clang.name)</span><br><span class="line">print(clang.add)</span><br></pre></td></tr></table></figure>
+<p>通过对setname()和setadd()方法进行适当设计，可避免用户对类中属性的不合理操作。而该类中没有提供操作私有方法<strong>display()的，即可保护</strong>display()在外部不可调用。</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Shape:</span><br><span class="line">    def draw(self,content):</span><br><span class="line">        print(&quot;画&quot;,content)</span><br><span class="line">class Form(Shape):  &#x2F;&#x2F;继承</span><br><span class="line">    def area(self):</span><br><span class="line">        #....</span><br><span class="line">        print(&quot;此图形的面积为...&quot;)</span><br></pre></td></tr></table></figure>
+<p>多继承即多个父类，java、c#等因为多继承可能因父类同名方法等存在冲突。而python中按顺序，前面的覆盖后面父类的同名属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Person(People, Animal):  &#x2F;&#x2F;多继承</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+	<div>
+	
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	
+	</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
+          
+            <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+          
+            <a href="/tags/python%E8%AF%AD%E8%A8%80/" rel="tag"># python语言</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/3468112246.html" rel="next" title="go语言学习笔记">
+                <i class="fa fa-chevron-left"></i> go语言学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/p/1005221349.html" rel="prev" title="Ren’Py GAL开发学习笔记">
+                Ren’Py GAL开发学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Misaka10013</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">138</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/misaka10013" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:648106369@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/misaka10013" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/zhang-ze-hao-34" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.lmyoaoa.com/inn/" title="明猪の雪地" target="_blank">明猪の雪地</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.liuboyuan.fun/" title="风雨轩窗日暮光" target="_blank">风雨轩窗日暮光</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/ygjzs/" title="跌倒的小黄瓜" target="_blank">跌倒的小黄瓜</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yujie.pro/" title="夜灭の小窝" target="_blank">夜灭の小窝</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python语言基础知识"><span class="nav-number">1.</span> <span class="nav-text">python语言基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#python语言基础知识-1"><span class="nav-number">1.1.</span> <span class="nav-text">python语言基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hello-world"><span class="nav-number">1.2.</span> <span class="nav-text">hello world</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型及运算符号"><span class="nav-number">2.</span> <span class="nav-text">数据类型及运算符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python流程控制（略）"><span class="nav-number">3.</span> <span class="nav-text">python流程控制（略）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#循环"><span class="nav-number">3.1.</span> <span class="nav-text">循环</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">4.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义函数"><span class="nav-number">4.1.</span> <span class="nav-text">自定义函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#值得注意"><span class="nav-number">4.2.</span> <span class="nav-text">值得注意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类与对象"><span class="nav-number">5.</span> <span class="nav-text">类与对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">5.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装"><span class="nav-number">5.2.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继承"><span class="nav-number">5.3.</span> <span class="nav-text">继承</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">御坂</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">292k</span>
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.0</div>
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66531323";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+	  <script src="https://misaka10013.cn/live2d/autoload.js"></script>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  <script src="/js/src/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd9dd27873bbc9806622a',
+      clientSecret: '5f85636536b9c39ca882ae2b231b271e9d180e0a',
+      repo: 'misaka10013.github.io',
+      owner: 'misaka10013',
+      admin: ['misaka10013'],
+      id: location.pathname,
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>

@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Misaka10013,misaka,御坂10013,御坂" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Misaka10013'blogs" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Misaka10013&#39;blogs">
+<meta property="og:url" content="https://misaka10013.cn/404.html">
+<meta property="og:site_name" content="Misaka10013&#39;blogs">
+<meta property="og:description" content="window.imageLazyLoadSetting &#x3D; {                 isSPA: false,                 processImages: null,             };         window.addEventListener(&quot;load&quot;,f">
+<meta property="article:published_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:modified_time" content="2021-04-10T07:12:28.582Z">
+<meta property="article:author" content="Misaka10013">
+<meta property="article:tag" content="misaka">
+<meta property="article:tag" content="misaka10013">
+<meta property="article:tag" content="御坂">
+<meta property="article:tag" content="御坂10013">
+<meta property="article:tag" content="御坂美琴">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://misaka10013.cn/404.html"/>
+
+
+
+
+
+  <title>御坂可视化数据库需求方案 | Misaka10013'blogs</title>
+  
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Misaka10013'blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">御坂世界</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-photo"></i> <br />
+            
+            Photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-download"></i> <br />
+            
+            other
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://misaka10013.cn/p/3043907213.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Misaka10013">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Misaka10013'blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">御坂可视化数据库需求方案</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-22T14:04:35+08:00">2020-08-22</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">44k</span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>随着域名数据统计中关于影视、书籍、游戏等需要统计的数据越来越多，且可视化需求越来越高，对“御坂关于页面”内容更新、维护不便，且无法满足自定义、多样化的可视化图表表现方案。目前需要一个后端，且能便利的支持手机移动端，实现方便的新增输入数据，并对数据进一步统计处理再可视化渲染为图表，并且渲染出来的图表可便利的在移动端、web端进行显示。</p>
+<h1 id="一、数据库小程序部分"><a href="#一、数据库小程序部分" class="headerlink" title="一、数据库小程序部分"></a>一、数据库小程序部分</h1><p>之所以选择小程序，原因在于小程序具有轻后端、前端编写简单的特点，且能跨平台使用。</p>
+<p><strong>关键需求点：移动端数据输入、数据可视图表化、多平台渲染显示</strong><br><strong>重要技术点：跨平台支持、移动端输入数据与后台数据交互存储、数据库数据读取和加工、数据内容可视化图表</strong></p>
+<h2 id="（二）数据库小程序设计方案"><a href="#（二）数据库小程序设计方案" class="headerlink" title="（二）数据库小程序设计方案"></a>（二）数据库小程序设计方案</h2><h3 id="1-小程序开发知识（程序源文件结构）"><a href="#1-小程序开发知识（程序源文件结构）" class="headerlink" title="1.小程序开发知识（程序源文件结构）"></a>1.小程序开发知识（程序源文件结构）</h3><p>小程序可视化的部分主要是由页面、组件两部分组成。而小程序的程序源代码结构一般由以下几个部分组成：</p>
+<blockquote>
+<p>├─ component<br>│  └─  各组件  //各组件虽然在实际的数据表上存在差异，目前组件中均存在数据库请求、页面渲染、查询等子组件内容相似，可优化<br>│      ├─  dmrwSinput //动漫人物组件<br>│      ├─  dmSinput //动漫组件<br>│      ├─  dsjSinput //电视剧组件<br>│      ├─  dySinput //电影组件<br>│      ├─  xsSinput //小说组件<br>│      ├─  yrSinput //艺人组件<br>│      ├─  yxrwSinput //游戏人物组件<br>│      └─  yxSinput //游戏组件<br>├─ pages<br>│  └─  各页面<br>│      ├─  datef //数据展示分析页面（简称：“御坂世界”  小程序页面栏关键词）<br>│      ├─  dateint //数据查询、新增数据页面（简称：数据键入）<br>│      └─  index //默认首页页面（简称：数据分析）<br>├─ soure<br>│  └─  资源<br>├─ utils<br>│  └─  外部引用文件<br>└─ 根目录文件<br>   ├─  app.js<br>   └─  app.json</p>
+</blockquote>
+<h3 id="2-基于小程序开发的数据结构"><a href="#2-基于小程序开发的数据结构" class="headerlink" title="2.基于小程序开发的数据结构"></a>2.基于小程序开发的数据结构</h3><p>在需求上，“数据键入”页面需要满足功能：</p>
+<ul>
+<li>在页面渲染时准备好 <strong>“查询组件块” 、“新增数据组件块”</strong>。<em>//由于此两个组件块均需要对表进行操作，可在页面上写表的选择器，而将两个组件块放在同一个表选择器下，由一个共同的组件component合并，通过载入不同的表时载入组件块。这种思路层次简单，但导致不同的表需要不同的组件component，在代码上并不简洁，选择不同的表需要载入不同的组件component，只有解决表选择与组件component之间的传值问题，可简化此段代码结构</em></li>
+<li>“查询组件块”应具备根据选择的表，在输入关键词之后进行模糊搜索表中内容。对搜索到的对您可以进行删除、修改等点击操作，且在输入为空时，清除搜索的内容，以免挤占页面。搜索出来的项目应具备一定的辨识度，以便于能通过简单的关键词在搜索出来个几个占用页面不大的空间中能分辨对比出其特点。<em>//在搜索内容外部需要添加一个判断，当输入框内容为无时清除搜索内容，在输入框有内容时进行模糊搜索。由于模糊搜索会同时搜索出多个结果，对任一一个搜索结果能展示的内容需要挑选重点显示（如名称、主要重点、评分、时间点等），且搜索的内容需要具备一定的顺序，目前设定为按<strong>综合评分</strong>来进行顺序判定。可考虑在查询块下部添加一个数据详细展示框，当查询出来的多个结果某个被选中时，可在展示框中展示详细的数据包括图</em></li>
+<li>“新增数据组件块”应能根据选择的表，载入渲染不同的输入框和选择项以便于不同的表数据录入。<em>//根据表的不同渲染出不同的输入框和选择项。需要考虑如何将此处数据键入的页面功能和查询到数据后的修改合并。实现查询到的数据项点击修改出现在“新增数据组件块”中，并进行修改。</em></li>
+</ul>
+<p>在页面显示上，为了辨识性，在页面范围应该有包括表选择项在内的内容组成主体页面，内部再包含并行的“查询组件块” 、“新增数据组件块”两个功能块。“查询组件块”中需要包含查询区域、模糊搜索项列区域、详细数据展示区域。“新增数据组件块”由数据提示输入区域和确认键入数据区域组成。如下简图：</p>
+<p>针对不同的表，需要展示的数据并不相同。搜索展示数据在搜索名称、主演、人物等信息时出现，按评分从高至低排列。主要按以下：</p>
+<blockquote>
+<p>电影表（dySinput）：</p>
+<ul>
+<li>图片  tUrl</li>
+<li>名称  moName</li>
+<li>主演  acTor    </li>
+<li>评分  MscOre</li>
+<li>出品时间  prOdata</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>电视剧表(dsjSinput):</p>
+<ul>
+<li>图片  tUrl</li>
+<li>名称  moName</li>
+<li>主演  acTor</li>
+<li>评分  MscOre</li>
+<li>出品时间  prOdata</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>艺人表(yrSinput)：</p>
+<ul>
+<li>图片  tUrl</li>
+<li>名称  moName</li>
+<li>评分  MscOre</li>
+<li>职业  vocAtion</li>
+<li>国籍  coUntry</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>动画表（dmSinput）：</p>
+<ul>
+<li>图片  tUrl</li>
+<li>名称  moName</li>
+<li>综合评分  MscOre</li>
+<li>主要角色  acTor</li>
+<li>出品方  proDucer</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>动漫人物表（dmrwSinput）：</p>
+<ul>
+<li>图片  tUrl</li>
+<li>人物  moName</li>
+<li>动画  frAnime</li>
+<li>评分  MscOre</li>
+<li>声优  voice</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>游戏表（yxSinput）：</p>
+<ul>
+<li>图片  tUrl</li>
+<li>名称  moName</li>
+<li>平台  station</li>
+<li>综合评分  MscOre</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>游戏人物表（yxrwSinput）：</p>
+<ul>
+<li>图片  tUrl</li>
+<li>名称  moName</li>
+<li>游戏  frgame</li>
+<li>评分  MscOre</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>小说表（xsSinput）：</p>
+<ul>
+<li>名称  moName</li>
+<li>作者  author</li>
+<li>综合评分  MscOre</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>小说人物表（xsrwSinput）：</p>
+<ul>
+<li>人物  moName</li>
+<li>小说  frStory</li>
+<li>评分  MscOre</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>番号表（fhSinput）：</p>
+<ul>
+<li>图片  tUrl</li>
+<li>番号  fhao</li>
+<li>名称  moName</li>
+<li>综合评分  MscOre</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>里番表（lfdmSinput）：</p>
+<ul>
+<li>图片  tUrl</li>
+<li>名称  moName</li>
+<li>重要角色  acTor</li>
+<li>综合评分  MscOre</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>漫画表（mhSinput）：</p>
+<ul>
+<li>图片  tUrl</li>
+<li>名称  moName</li>
+<li>综合评分  MscOre</li>
+</ul>
+</blockquote>
+<h4 id="1-1页面与数据的对齐"><a href="#1-1页面与数据的对齐" class="headerlink" title="1.1页面与数据的对齐"></a>1.1页面与数据的对齐</h4><p>由于数据的显示、输入需要严格的对齐，需要规定每个数据项及其对应关键词名。【】用于表示选择项。</p>
+<p>（1）表项目结构<code>dy:[&#39;名称&#39;,&#39;外译名&#39;,&#39;主演&#39;,&#39;类型&#39;,&#39;内容&#39;,&#39;导演&#39;,&#39;编剧&#39;,&#39;出品时间&#39;,&#39;国别地域&#39;,&#39;评分&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>moName,foName,acTor,tyPe,coNtent,diRect,wrIter,prOdata,coUntry,MscOre,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>电影表</th>
+<th>名称</th>
+<th>外译名</th>
+<th>主演</th>
+<th><strong>【类型】</strong></th>
+<th>内容</th>
+<th>导演</th>
+<th>编剧</th>
+<th><strong>【出品时间】</strong></th>
+<th><strong>【国别地域】</strong></th>
+<th><strong>【评分】</strong></th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dySinput</td>
+<td>moName</td>
+<td>foName</td>
+<td>acTor</td>
+<td>【tyPe】</td>
+<td>coNtent</td>
+<td>diRect</td>
+<td>wrIter</td>
+<td>【prOdata】</td>
+<td>【coUntry】</td>
+<td>【MscOre】</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>（2）表项目结构<code>dsj:[&#39;名称&#39;,&#39;外译名&#39;,&#39;主演&#39;,&#39;类型&#39;,&#39;内容&#39;,&#39;导演&#39;,&#39;编剧&#39;,&#39;出品时间&#39;,&#39;国别地域&#39;,&#39;评分&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>moName,foName,acTor,tyPe,coNtent,diRect,wrIter,prOdata,coUntry,MscOre,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>电视剧表</th>
+<th>名称</th>
+<th>外译名</th>
+<th>主演</th>
+<th><strong>【类型】</strong></th>
+<th>内容</th>
+<th>导演</th>
+<th>编剧</th>
+<th><strong>【出品时间】</strong></th>
+<th><strong>【国别地域】</strong></th>
+<th><strong>【评分】</strong></th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dsjSinput</td>
+<td>moName</td>
+<td>foName</td>
+<td>acTor</td>
+<td>【tyPe】</td>
+<td>coNtent</td>
+<td>diRect</td>
+<td>wrIter</td>
+<td>【prOdata】</td>
+<td>【coUntry】</td>
+<td>【MscOre】</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>（3）表项目结构<code>yr:[&#39;名称&#39;,&#39;外文名&#39;,&#39;评分&#39;,&#39;职业&#39;,&#39;国籍&#39;,&#39;出生地&#39;,&#39;出生日期&#39;,&#39;星座&#39;,&#39;毕业院校&#39;,&#39;高重三围&#39;,&#39;印象作品-角色-剧情&#39;,&#39;主要成就&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>moName,foName,MscOre,vocAtion,coUntry,bthPlace,bthDate,signs,school,HHBWH,WrAcSt,achMent,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>艺人表</th>
+<th>名称</th>
+<th>外文名</th>
+<th><strong>【评分】</strong></th>
+<th>职业</th>
+<th><strong>【国籍】</strong></th>
+<th>出生地</th>
+<th><strong>【出生日期】</strong></th>
+<th><strong>【星座】</strong></th>
+<th>毕业院校</th>
+<th>高重三围</th>
+<th>印象作品-角色-剧情</th>
+<th>主要成就</th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>yrSinput</td>
+<td>moName</td>
+<td>foName</td>
+<td>【MscOre】</td>
+<td>vocAtion</td>
+<td>【coUntry】</td>
+<td>bthPlace</td>
+<td>【bthDate】</td>
+<td>【signs】</td>
+<td>school</td>
+<td>HHBWH</td>
+<td>WrAcSt</td>
+<td>achMent</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>（4）表项目结构<code>dm:[&#39;名称&#39;,&#39;外译名&#39;,&#39;制作方&#39;,&#39;编剧&#39;,&#39;重要角色&#39;,&#39;国别地域&#39;,&#39;画风评分&#39;,&#39;剧情评分&#39;,&#39;综合评分&#39;,&#39;色气评分&#39;,&#39;内容&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>moName,foName,proDucer,wrIter,acTor,coUntry,PscOre,SscOre,MscOre,sexScOre,coNtent,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>动画表</th>
+<th>名称</th>
+<th>外译名</th>
+<th>制作方</th>
+<th>编剧</th>
+<th>重要角色</th>
+<th><strong>【国别地域】</strong></th>
+<th><strong>【画风评分】</strong></th>
+<th><strong>【剧情评分】</strong></th>
+<th><strong>【综合评分】</strong></th>
+<th><strong>【色气评分】</strong></th>
+<th>内容</th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dmSinput</td>
+<td>moName</td>
+<td>foName</td>
+<td>proDucer</td>
+<td>wrIter</td>
+<td>acTor</td>
+<td>【coUntry】</td>
+<td>【PscOre】</td>
+<td>【SscOre】</td>
+<td>【MscOre】</td>
+<td>【sexScOre】</td>
+<td>coNtent</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>（5）表项目结构<code>dmrw:[&#39;人物&#39;,&#39;动画&#39;,&#39;外文名&#39;,&#39;评分&#39;,&#39;声优&#39;,&#39;种族&#39;,&#39;年龄&#39;,&#39;出生日期&#39;,&#39;组织阵营&#39;,&#39;学校&#39;,&#39;地址&#39;,&#39;关键词&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>moName,frAnime,foName,MscOre,voice,race,age,bthDate,group,School,home,keyword,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>动漫人物表</th>
+<th>人物</th>
+<th>动画</th>
+<th>外文名</th>
+<th><strong>【评分】</strong></th>
+<th>声优</th>
+<th>种族</th>
+<th>年龄</th>
+<th>出生日期</th>
+<th>组织阵营</th>
+<th>学校</th>
+<th>地址</th>
+<th>关键词</th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dmrwSinput</td>
+<td>moName</td>
+<td>frAnime</td>
+<td>foName</td>
+<td>【MscOre】</td>
+<td>voice</td>
+<td>race</td>
+<td>age</td>
+<td>bthDate</td>
+<td>group</td>
+<td>School</td>
+<td>home</td>
+<td>keyword</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>（6）表项目结构<code>yx:[&#39;名称&#39;,&#39;外译名&#39;,&#39;内容&#39;,&#39;制作公司&#39;,&#39;策划&#39;,&#39;平台&#39;,&#39;类型&#39;,&#39;画风评分&#39;,&#39;剧情评分&#39;,&#39;综合评分&#39;,&#39;色气评分&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>moName,foName,coNtent,proDucer,diRect,station,tyPe,PscOre,SscOre,MscOre,sexScOre,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>游戏表</th>
+<th>名称</th>
+<th>外译名</th>
+<th>内容</th>
+<th>制作公司</th>
+<th>策划</th>
+<th><strong>【平台】</strong></th>
+<th><strong>【类型】</strong></th>
+<th><strong>【画风评分】</strong></th>
+<th><strong>【剧情评分】</strong></th>
+<th><strong>【综合评分】</strong></th>
+<th><strong>【色气评分】</strong></th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>yxSinput</td>
+<td>moName</td>
+<td>foName</td>
+<td>coNtent</td>
+<td>proDucer</td>
+<td>diRect</td>
+<td>【station】</td>
+<td>【tyPe】</td>
+<td>【PscOre】</td>
+<td>【SscOre】</td>
+<td>【MscOre】</td>
+<td>【sexScOre】</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>（7）表项目结构<code>yxrw:[&#39;名称&#39;,&#39;外文名&#39;,&#39;游戏&#39;,&#39;评分&#39;,&#39;声优&#39;,&#39;种族&#39;,&#39;年龄&#39;,&#39;出生日期&#39;,&#39;组织阵营&#39;,&#39;学校&#39;,&#39;地址&#39;,&#39;关键词&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>moName,foName,frgame,MscOre,voice,race,age,bthDate,group,School,home,keyword,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>游戏人物表</th>
+<th>名称</th>
+<th>外文名</th>
+<th>游戏</th>
+<th><strong>【评分】</strong></th>
+<th>声优</th>
+<th>种族</th>
+<th>年龄</th>
+<th>出生日期</th>
+<th>组织阵营</th>
+<th>学校</th>
+<th>地址</th>
+<th>关键词</th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>yxrwSinput</td>
+<td>moName</td>
+<td>foName</td>
+<td>frgame</td>
+<td>【MscOre】</td>
+<td>voice</td>
+<td>race</td>
+<td>age</td>
+<td>bthDate</td>
+<td>group</td>
+<td>School</td>
+<td>home</td>
+<td>keyword</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>（8）表项目结构<code>xs:[&#39;名称&#39;,&#39;作者&#39;,&#39;内容&#39;,&#39;类型&#39;,&#39;是否完结&#39;,&#39;综合评分&#39;,&#39;色气评分&#39;,&#39;评价&#39;,&#39;备注&#39;]</code></p>
+<p>快速导出字段：<code>moName,author,coNtent,tyPe,isComp,MscOre,sexScOre,review,reMark</code></p>
+<table>
+<thead>
+<tr>
+<th>小说表</th>
+<th>名称</th>
+<th>作者</th>
+<th>内容</th>
+<th><strong>【类型】</strong></th>
+<th><strong>【是否完结】</strong></th>
+<th><strong>【综合评分】</strong></th>
+<th><strong>【色气评分】</strong></th>
+<th>评价</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>xsSinput</td>
+<td>moName</td>
+<td>author</td>
+<td>coNtent</td>
+<td>【tyPe】</td>
+<td>【isComp】</td>
+<td>【MscOre】</td>
+<td>【sexScOre】</td>
+<td>review</td>
+<td>reMark</td>
+</tr>
+</tbody></table>
+<p>（9）表项目结构<code>xsrw:[&#39;人物&#39;,&#39;小说&#39;,&#39;评分&#39;,&#39;组织阵营&#39;,&#39;地址&#39;,&#39;关键词&#39;,&#39;备注&#39;]</code></p>
+<p>快速导出字段：<code>moName,frStory,MscOre,group,home,keyword,reMark</code></p>
+<table>
+<thead>
+<tr>
+<th>小说人物表</th>
+<th>人物</th>
+<th>小说</th>
+<th><strong>【评分】</strong></th>
+<th>组织阵营</th>
+<th>地址</th>
+<th>关键词</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>xsrwSinput</td>
+<td>moName</td>
+<td>frStory</td>
+<td>【MscOre】</td>
+<td>group</td>
+<td>home</td>
+<td>keyword</td>
+<td>reMark</td>
+</tr>
+</tbody></table>
+<p>（10）表项目结构<code>fh:[&#39;番号&#39;,&#39;名称&#39;,&#39;外译名&#39;,&#39;内容&#39;,&#39;关键词&#39;,&#39;主演&#39;,&#39;导演&#39;,&#39;画风评分&#39;,&#39;剧情评分&#39;,&#39;综合评分&#39;,&#39;色气评分&#39;,&#39;马赛克&#39;,&#39;字幕&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>fhao,moName,foName,coNtent,keyword,acTor,diRect,PscOre,SscOre,MscOre,sexScOre,isMosaic,isSubtitle,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>番号表</th>
+<th>番号</th>
+<th>名称</th>
+<th>外译名</th>
+<th>内容</th>
+<th>关键词</th>
+<th>主演</th>
+<th>导演</th>
+<th><strong>【画风评分】</strong></th>
+<th><strong>【剧情评分】</strong></th>
+<th><strong>【综合评分】</strong></th>
+<th><strong>【色气评分】</strong></th>
+<th><strong>【马赛克】</strong></th>
+<th><strong>【字幕】</strong></th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>fhSinput</td>
+<td>fhao</td>
+<td>moName</td>
+<td>foName</td>
+<td>coNtent</td>
+<td>keyword</td>
+<td>acTor</td>
+<td>diRect</td>
+<td>【PscOre】</td>
+<td>【SscOre】</td>
+<td>【MscOre】</td>
+<td>【sexScOre】</td>
+<td>【isMosaic】</td>
+<td>【isSubtitle】</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>（11）表项目结构<code>lfdm:[&#39;名称&#39;,&#39;外译名&#39;,&#39;制作人&#39;,&#39;编剧&#39;,&#39;重要角色&#39;,&#39;画风评分&#39;,&#39;剧情评分&#39;,&#39;综合评分&#39;,&#39;色气评分&#39;,&#39;出品时间&#39;,&#39;马赛克&#39;,&#39;字幕&#39;,&#39;内容&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>moName,foName,proDucer,wrIter,acTor,PscOre,SscOre,MscOre,sexScOre,prOdata,isMosaic,isSubtitle,coNtent,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>里番表</th>
+<th>名称</th>
+<th>外译名</th>
+<th>制作人</th>
+<th>编剧</th>
+<th>重要角色</th>
+<th><strong>【画风评分】</strong></th>
+<th><strong>【剧情评分】</strong></th>
+<th><strong>【综合评分】</strong></th>
+<th><strong>【色气评分】</strong></th>
+<th><strong>【出品时间】</strong></th>
+<th><strong>【马赛克】</strong></th>
+<th><strong>【字幕】</strong></th>
+<th>内容</th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lfdmSinput</td>
+<td>moName</td>
+<td>foName</td>
+<td>proDucer</td>
+<td>wrIter</td>
+<td>acTor</td>
+<td>【PscOre】</td>
+<td>【SscOre】</td>
+<td>【MscOre】</td>
+<td>【sexScOre】</td>
+<td>【prOdata】</td>
+<td>【isMosaic】</td>
+<td>【isSubtitle】</td>
+<td>coNtent</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>（12）表项目结构<code>mh:[&#39;名称&#39;,&#39;外译名&#39;,&#39;画师&#39;,&#39;作者&#39;,&#39;重要角色&#39;,&#39;画风评分&#39;,&#39;剧情评分&#39;,&#39;综合评分&#39;,&#39;色气评分&#39;,&#39;出品时间&#39;,&#39;汉化&#39;,&#39;内容&#39;,&#39;类型&#39;,&#39;位置&#39;,&#39;备注&#39;,&#39;图片&#39;]</code></p>
+<p>快速导出字段：<code>moName,foName,painter,wrIter,acTor,PscOre,SscOre,MscOre,sexScOre,prOdata,isTrans,coNtent,tyPe,fileSite,reMark,tUrl</code></p>
+<table>
+<thead>
+<tr>
+<th>漫画表</th>
+<th>名称</th>
+<th>外译名</th>
+<th>画师</th>
+<th>作者</th>
+<th>重要角色</th>
+<th><strong>【画风评分】</strong></th>
+<th><strong>【剧情评分】</strong></th>
+<th><strong>【综合评分】</strong></th>
+<th><strong>【色气评分】</strong></th>
+<th><strong>【出品时间】</strong></th>
+<th><strong>【汉化】</strong></th>
+<th>内容</th>
+<th><strong>【类型】</strong></th>
+<th>位置</th>
+<th>备注</th>
+<th>图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mhSinput</td>
+<td>moName</td>
+<td>foName</td>
+<td>painter</td>
+<td>wrIter</td>
+<td>acTor</td>
+<td>【PscOre】</td>
+<td>【SscOre】</td>
+<td>【MscOre】</td>
+<td>【sexScOre】</td>
+<td>【prOdata】</td>
+<td>【isTrans】</td>
+<td>coNtent</td>
+<td>【tyPe】</td>
+<td>fileSite</td>
+<td>reMark</td>
+<td>tUrl</td>
+</tr>
+</tbody></table>
+<p>预计还需要设计数据结构及关键词的表</p>
+<ul>
+<li>项目完成度表录入：项目 内容 目标值 当前值 进度</li>
+<li>项目推进记录表录入：项目 内容 当前值 上次值 上次推进比</li>
+<li>完成项目表录入：标题 内容 重要度 紧急度 是否完成（仅记录作用？）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">db.collection(&#39;system&#39;)  &#x2F;&#x2F;小程序数据库表项快速添加模板</span><br><span class="line">  .add(&#123;</span><br><span class="line">    data: [</span><br><span class="line">      &#123;</span><br><span class="line">        dy:[&#39;名称&#39;,&#39;外译名&#39;,&#39;主演&#39;,&#39;内容&#39;,&#39;导演&#39;,&#39;编剧&#39;,&#39;备注&#39;,&#39;图片&#39;],</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        dsj:[&#39;名称&#39;,&#39;外译名&#39;,&#39;主演&#39;,&#39;内容&#39;,&#39;导演&#39;,&#39;编剧&#39;,&#39;备注&#39;,&#39;图片&#39;],</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        yr:[&#39;名称&#39;,&#39;外文名&#39;,&#39;职业&#39;,&#39;出生地&#39;,&#39;毕业院校&#39;,&#39;高重三围&#39;,&#39;印象作品-角色-剧情&#39;,&#39;主要成就&#39;,&#39;备注&#39;,&#39;图片&#39;]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        dm:[&#39;名称&#39;,&#39;外译名&#39;,&#39;制作方&#39;,&#39;编剧&#39;,&#39;重要角色&#39;,&#39;内容&#39;,&#39;备注&#39;,&#39;图片&#39;]</span><br><span class="line">      &#125;,&#123;</span><br><span class="line">        dmrw:[&#39;人物&#39;,&#39;动画&#39;,&#39;外文名&#39;,&#39;声优&#39;,&#39;种族&#39;,&#39;年龄&#39;,&#39;出生日期&#39;,&#39;组织阵营&#39;,&#39;学校&#39;,&#39;地址&#39;,&#39;关键词&#39;,&#39;备注&#39;,&#39;图片&#39;]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        yx:[&#39;名称&#39;,&#39;外译名&#39;,&#39;内容&#39;,&#39;制作公司&#39;,&#39;策划&#39;,&#39;备注&#39;,&#39;图片&#39;]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        yxrw:[&#39;名称&#39;,&#39;外文名&#39;,&#39;游戏&#39;,&#39;声优&#39;,&#39;种族&#39;,&#39;年龄&#39;,&#39;出生日期&#39;,&#39;组织阵营&#39;,&#39;学校&#39;,&#39;地址&#39;,&#39;关键词&#39;,&#39;备注&#39;,&#39;图片&#39;]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        xs:[&#39;名称&#39;,&#39;作者&#39;,&#39;内容&#39;,&#39;评价&#39;,&#39;备注&#39;]</span><br><span class="line">      &#125;,&#123;</span><br><span class="line">        xsrw:[&#39;人物&#39;,&#39;小说&#39;,&#39;组织阵营&#39;,&#39;地址&#39;,&#39;关键词&#39;,&#39;备注&#39;]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        fh:[&#39;番号&#39;,&#39;名称&#39;,&#39;外译名&#39;,&#39;内容&#39;,&#39;关键词&#39;,&#39;主演&#39;,&#39;导演&#39;,&#39;备注&#39;,&#39;图片&#39;]</span><br><span class="line">      &#125;,&#123;</span><br><span class="line">        lfdm:[&#39;名称&#39;,&#39;外译名&#39;,&#39;制作人&#39;,&#39;编剧&#39;,&#39;重要角色&#39;,&#39;内容&#39;,&#39;备注&#39;,&#39;图片&#39;]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        mh:[&#39;名称&#39;,&#39;外译名&#39;,&#39;画师&#39;,&#39;作者&#39;,&#39;重要角色&#39;,&#39;内容&#39;,&#39;位置&#39;,&#39;备注&#39;,&#39;图片&#39;]</span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>数据库内容筛选删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">db.collection(&quot;yxSinput&quot;)</span><br><span class="line">  .where(&#123;</span><br><span class="line">    _id: db.command.exists(true)</span><br><span class="line">  &#125;)</span><br><span class="line">  .remove()</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="1-2后端数据的数据常量"><a href="#1-2后端数据的数据常量" class="headerlink" title="1.2后端数据的数据常量"></a>1.2后端数据的数据常量</h4><p>各表的选择项内容对应数组值如下：</p>
+<ul>
+<li>表选项：<code>biaolist: [&#39;电影数据&#39;, &#39;电视剧数据&#39;, &#39;艺人数据&#39;, &#39;动画数据&#39;,&#39;动漫人物数据&#39;,&#39;游戏数据&#39;,&#39;游戏人物&#39;,&#39;小说数据&#39;,&#39;项目完成度表&#39;,&#39;项目推进记录表&#39;,&#39;完成项目表&#39;],</code></li>
+<li>电影类型：<code>leixing: [&#39;未知&#39;,&#39;动作&#39;,&#39;奇幻&#39;,&#39;喜剧&#39;,&#39;恐怖&#39;,&#39;冒险&#39;,&#39;爱情&#39;,&#39;警匪&#39;,&#39;科幻&#39;,&#39;战争&#39;,&#39;灾难&#39;,&#39;史诗&#39;,&#39;实验&#39;,&#39;微电影&#39;,&#39;悬疑&#39;,&#39;音乐&#39;,&#39;黑帮&#39;,&#39;纪录&#39;,&#39;公路&#39;,&#39;意识流&#39;,&#39;动画&#39;,&#39;惊悚&#39;,&#39;西部&#39;,&#39;飞车&#39;,&#39;家庭&#39;,&#39;超级英雄&#39;],</code></li>
+<li>游戏类型：<code>yxleixing: [&#39;未知&#39;,&#39;RPG游戏&#39;,&#39;ACT游戏&#39;,&#39;AVG游戏&#39;,&#39;策略&#39;,&#39;经营&#39;,&#39;射击&#39;,&#39;益智&#39;,&#39;体育竞技&#39;,&#39;竞速&#39;,&#39;卡牌&#39;,&#39;音游&#39;,&#39;网游&#39;,&#39;养成&#39;,&#39;模拟&#39;,&#39;格斗&#39;,&#39;解密&#39;,&#39;恐怖&#39;,&#39;Rlike游戏&#39;,&#39;对抗&#39;,&#39;自由建造&#39;,&#39;无双&#39;,&#39;多人合作&#39;],</code></li>
+<li>游戏平台：<code>station:[&#39;PC&#39;,&#39;NS&#39;,&#39;PSP&#39;,&#39;手游&#39;],</code></li>
+<li>小说类型：<code>xiaoshuo:[&#39;未知&#39;,&#39;武侠&#39;,&#39;玄幻&#39;,&#39;仙侠&#39;,&#39;科幻&#39;,&#39;都市青春&#39;,&#39;穿越历史&#39;,&#39;军事幻想&#39;,&#39;游戏世界&#39;,&#39;重生&#39;,&#39;体育&#39;,&#39;变身&#39;,&#39;宅文&#39;,&#39;同人&#39;,&#39;综漫&#39;,&#39;H文&#39;],</code></li>
+<li>国别地域：<code>guobie: [&#39;英国 England&#39;,&#39;美国 America&#39;,&#39;加拿大Canada&#39;,&#39;俄罗斯 Russia&#39;,&#39;大陆 China&#39;,&#39;希腊 Greece&#39;,&#39;法国 France&#39;,&#39;德国 Germany&#39;,&#39;日本 Japan&#39;,&#39;韩国 Korea&#39;,&#39;香港 HongKong&#39;,&#39;台湾 TaiWan&#39;,&#39;泰国 Thailand&#39;,&#39;印度 India&#39;],</code></li>
+<li>星座：<code>signs: [&#39;白羊座&#39;,&#39;金牛座&#39;,&#39;双子座&#39;,&#39;巨蟹座&#39;,&#39;狮子座&#39;,&#39;处女座&#39;,&#39;天枰座&#39;,&#39;天蝎座&#39;,&#39;射手座&#39;,&#39;魔蝎座&#39;,&#39;水瓶座&#39;,&#39;双鱼座&#39;],</code></li>
+<li>评分项：<code>score: [&#39;0分&#39;,&#39;1分&#39;,&#39;2分&#39;,&#39;3分&#39;,&#39;4分&#39;,&#39;5分&#39;],</code></li>
+</ul>
+<p>具体内容输入项应该有四类。输入框组件类、下拉选项类、需点击进行修改类和不可输入修改类。根据不同表的内容不同，制作不同的由组件构成的大组件，再根据表载入不同的填表内容。</p>
+<h3 id="3-数据展示和分析页面"><a href="#3-数据展示和分析页面" class="headerlink" title="3.数据展示和分析页面"></a>3.数据展示和分析页面</h3><p>在小程序端应该主要有三个页面部分。分别是数据分析页面，此页面后面可用于展示关于页面动态的数据内容。如玩的游戏时长统计、看的视频数量统计、项目完成度等各种主要数据。下方还可以添加数据处理之后的图表。</p>
+<h3 id="4-数据规范"><a href="#4-数据规范" class="headerlink" title="4.数据规范"></a>4.数据规范</h3><p>页面名称对齐</p>
+<p>组件名称对齐<br>“中文缩写+S+input”<br>数据需求及其数据名称对应规范表</p>
+<h1 id="二、数据库可视化渲染页面"><a href="#二、数据库可视化渲染页面" class="headerlink" title="二、数据库可视化渲染页面"></a>二、数据库可视化渲染页面</h1><p>建立数据库的主要作用不仅仅在于有组织的进行数据记录，更是为了动态的输出记录的数据并渲染图表。<br>之前也一直有想其他方案解决数据可视化的问题。一个尝试就是使用支持网页的excel文档，渲染图表之后上到博客页面上。但国内的wps等办公软件对数据内容会进行检查，我数据统计中很多18禁影视、游戏数据无法通过审核分享出来。于是有阵子尝试了外国的<a href="www.zoho.com">zoho在线表格</a>,在国内不用VPN的情况下，勉强可用，而且也不会审核数据内容，还可以创建分享图片，并加载到外部页面上去。但似乎因为加载的原因还是因为是外部引用页面的原因，加载这个外国在线表格的图表让我的页面很卡，而且这个外国的在线表格也不符合我使用国内办公软件的习惯，不便于数据的统计管理。</p>
+<p>在通过小程序的方式建立了数据库之后，我们就可以利用一些自己编写的程序完成对数据的图形化并加载到自己的网页中。甚至我们可以产生在图形化之后进行静态化输出。</p>
+<h2 id="（一）数据网页可视化方案"><a href="#（一）数据网页可视化方案" class="headerlink" title="（一）数据网页可视化方案"></a>（一）数据网页可视化方案</h2><p>要将数据库的数据在网页页面读取出来并且渲染表格和图形，我们需要完成以下功能。</p>
+<ol>
+<li>数据库数据读取</li>
+<li>数据的筛选、分类、统计（加工）</li>
+<li>生成表格和图形（前端页面）</li>
+<li>转换为图片或静态网页输出（静态化）</li>
+</ol>
+<p>一开始的时候，我按照传统的大家的想法，上述这个过程应该在用户访问或者外部引用这个静态图表时触发我们的程序，从而产生读取、加工、渲染等一系列操作。但这样会导致我们设计的这个程序较为复杂，而且一次性运行，虽然让内容渲染每次都是即时的，但却无疑增加了访问、加载时的延迟，毕竟一旦触发就要经过读取、加工、渲染一系列操作，而且我的统计表必然涉及对整个数据库多张表的多个不同类型的查询统计，例如统计某类型的电影有多少部，就需要对电影表25个不同类型进行全表筛选统计，更何况还有电视剧、动漫、游戏，还有星级、国别等分类，一旦让数据读取、筛选统计加工这个环节放在访问、加载之后，比如极大的延迟访问、加载的结果反馈。</p>
+<p>于是最优的方案我认为是把上述流程分成两个程序，我们在云开发中的云函数来分别写着两个程序———<strong>数据统计整理程序和数据渲染程序</strong>。</p>
+<p><strong>数据统计整理程序</strong>设置为云端定时触发，定期对数据库的数据情况进行整理统计，主要负责：</p>
+<ul>
+<li>数据读取、筛选、统计</li>
+<li>将统计结果汇总为一个数据集合写入到新的数据表中</li>
+</ul>
+<p><strong>数据渲染程序</strong>设置为HTTP访问触发，即外部访问时，负责渲染出一个页面来显示数据结果，主要负责：</p>
+<ul>
+<li>读取汇总的数据集合</li>
+<li>生成表格和图形</li>
+<li>将页面内容静态化（如果需要的话）</li>
+</ul>
+<h2 id="（二）数据渲染程序"><a href="#（二）数据渲染程序" class="headerlink" title="（二）数据渲染程序"></a>（二）数据渲染程序</h2><p>数据统计整理程序的关键在于需要生成一个我们最后渲染页面时要用的数据集合。所以我们需要先思考这个数据集合应该是怎样的结构，由哪些数据组成。我觉得从这点我们也可以体会出来，一旦涉及交互的内容，其实还是得先设计用户能够接触到的内容，只能才能来定义实现这些内容的方式。</p>
+<p>也就是说虽然执行逻辑上，我们是先进行统计整理数据，之后再进行内容的渲染，但事实上我们在设计时，由于最终展示内容是直面用户，也就是直面需求，我们反而需要先去设计渲染内容，才能根据渲染内容来思考怎么进行数据的统计整理。</p>
+<p>每个echarts 实例创建多个图表和坐标系等等（用 option 来描述）；系列（series）表示一组数值以及他们映射成的图。包含的要素至少有：一组数值、图表类型（series.type）、以及其他的关于这些数据如何映射成图的参数。<br>图表类型有：line（折线图）、bar（柱状图）、pie（饼图）、scatter（散点图）、graph（关系图）、tree（树图）……</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 此处填入您的真实环境 ID</span><br><span class="line">const envId &#x3D; &quot;misaka10013-80b8a&quot;</span><br><span class="line"></span><br><span class="line">exports.main &#x3D; async (event) &#x3D;&gt; &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 网页HTML代码</span><br><span class="line">  const body &#x3D; </span><br><span class="line">  &#96;</span><br><span class="line">  &lt;!doctype html&gt;</span><br><span class="line">  &lt;html lang&#x3D;&quot;zh&quot;&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">      &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">      &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;imgcache.qq.com&#x2F;qcloud&#x2F;tcbjs&#x2F;1.9.0&#x2F;tcb.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">      &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;res.wx.qq.com&#x2F;open&#x2F;js&#x2F;cloudbase&#x2F;1.1.0&#x2F;cloud.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">      &lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;https:&#x2F;&#x2F;test-1252926453.cos.ap-shanghai.myqcloud.com&#x2F;echarts.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body style&#x3D;&quot;text-align:center;&quot;&gt;</span><br><span class="line">      &lt;header&gt;</span><br><span class="line">        &lt;h1&gt;学生信息系统&lt;&#x2F;h1&gt;</span><br><span class="line">      &lt;&#x2F;header&gt;</span><br><span class="line">      &lt;div style&#x3D;&quot;margin: 10px 10px 10px 10px; padding: 10px 10px 10px 10px; border: solid;&quot;&gt;</span><br><span class="line">        &lt;h2&gt;数据表&lt;&#x2F;h2&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div id&#x3D;&quot;main&quot; style&#x3D;&quot;width: 600px;height:400px;&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">        let a &#x3D; &#123;&#125;;</span><br><span class="line">        const app &#x3D; tcb.init(&#123;</span><br><span class="line">            env: &quot;misaka10013-80b8a&quot;  &#x2F;&#x2F;huanj</span><br><span class="line">        &#125;);</span><br><span class="line">        app</span><br><span class="line">            .auth()</span><br><span class="line">            .signInAnonymously()</span><br><span class="line">            .then(()&#x3D;&gt;&#123;</span><br><span class="line">                var coll &#x3D;app.database().collection(&quot;dataUse&quot;)</span><br><span class="line">                coll.doc(&quot;测试&quot;).field(&#123;</span><br><span class="line">                    _id:false,</span><br><span class="line">                    __proto__:false</span><br><span class="line">                &#125;).get().then((res)&#x3D;&gt;&#123;</span><br><span class="line">                    console.log(&quot;??????&quot;,res)</span><br><span class="line">                    a&#x3D;res.data[0]</span><br><span class="line">                    console.log(&quot;aaaaaa&quot;,a)</span><br><span class="line">                    delete a.__proto__</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">        function print() &#123;</span><br><span class="line">            console.log(&quot;da&quot;,a)</span><br><span class="line">            &#x2F;&#x2F; 基于准备好的dom，初始化echarts实例</span><br><span class="line">            var myChart &#x3D; echarts.init(document.getElementById(&#39;main&#39;));</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 指定图表的配置项和数据</span><br><span class="line">            &#x2F;&#x2F; 使用刚指定的配置项和数据显示图表。</span><br><span class="line">            myChart.setOption(a);</span><br><span class="line">        &#125;</span><br><span class="line">        setTimeout(print, 5000);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">        &lt;h2&gt;信息列表&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;div id&#x3D;&quot;info-box&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">  &lt;&#x2F;html&gt;</span><br><span class="line">  &#96;</span><br><span class="line"></span><br><span class="line">  return &#123;</span><br><span class="line">    statusCode: 200,</span><br><span class="line">    headers: &#123;</span><br><span class="line">        &#39;content-type&#39;: &#39;text&#x2F;html&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    body: body</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">const tcb &#x3D; require(&#39;@cloudbase&#x2F;node-sdk&#39;)</span><br><span class="line">exports.main &#x3D; async (event) &#x3D;&gt; &#123;</span><br><span class="line"></span><br><span class="line">this.app &#x3D; tcb.init(&#123;</span><br><span class="line">    env: &quot;misaka10013-80b8a&quot;</span><br><span class="line">&#125;)</span><br><span class="line">const db &#x3D; this.app.database()</span><br><span class="line">const _ &#x3D; db.command</span><br><span class="line">const a &#x3D; await db.collection(&#39;dataUse&#39;).doc(&#39;测试&#39;).field(&#123;</span><br><span class="line">          _id:false</span><br><span class="line">        &#125;).get(&#123;</span><br><span class="line">  success: function(res) &#123;</span><br><span class="line">    &#x2F;&#x2F; res.data 包含该记录的数据</span><br><span class="line">    &#x2F;&#x2F;console.log(res.data.data)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const b &#x3D; a.data[0]</span><br><span class="line">return b</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="（三）数据统计整理程序"><a href="#（三）数据统计整理程序" class="headerlink" title="（三）数据统计整理程序"></a>（三）数据统计整理程序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 此处填入您的真实环境 ID</span><br><span class="line">const tcb &#x3D; require(&#39;@cloudbase&#x2F;node-sdk&#39;)</span><br><span class="line">this.app &#x3D; tcb.init(&#123;</span><br><span class="line">    env: &quot;misaka10013-80b8a&quot;</span><br><span class="line">&#125;)</span><br><span class="line">const db &#x3D; this.app.database()</span><br><span class="line">const _ &#x3D; db.command</span><br><span class="line">&#x2F;&#x2F;const cloud &#x3D; require(&#39;wx-server-sdk&#39;)</span><br><span class="line">&#x2F;&#x2F;var coll &#x3D; this.app.database().collection(&quot;test_db&quot;)</span><br><span class="line">&#x2F;&#x2F;cloud.init()</span><br><span class="line">const biao &#x3D; new Array(&#39;dySinput&#39;,&#39;dsjSinput&#39;,&#39;yxSinput&#39;)</span><br><span class="line">exports.main &#x3D; async () &#x3D;&gt; &#123;</span><br><span class="line">    const countResult&#x3D;new Array()</span><br><span class="line">    for (var i&#x3D;0,len&#x3D;biao.length; i&lt;len; i++)</span><br><span class="line">    &#123;   </span><br><span class="line">        var e&#x3D;1</span><br><span class="line">        countResult[biao[i]] &#x3D; await db.collection(biao[i]).count()</span><br><span class="line">        e&#x3D;await db.collection(biao[i]).where(_.or([</span><br><span class="line">            &#123;</span><br><span class="line">                scOre: _.eq(&#39;5分&#39;)</span><br><span class="line">            &#125;,&#123;</span><br><span class="line">                MscOre: _.eq(&#39;5分&#39;)</span><br><span class="line">            &#125;</span><br><span class="line">        ])).count()</span><br><span class="line">        countResult[biao[i]][&#39;fzb&#39;] &#x3D;e.total</span><br><span class="line">        e&#x3D;countResult[biao[i]]</span><br><span class="line">        db.collection(&#39;dataUse&#39;).doc(biao[i]).set(&#123;</span><br><span class="line">            total: e.total,</span><br><span class="line">            score5: e.fzb</span><br><span class="line">            </span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    console.log(countResult)</span><br><span class="line">    return countResult[biao[0]].total</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">转字符串，再转</span><br><span class="line">&#x2F;&#x2F; 此处填入您的真实环境 ID</span><br><span class="line">const tcb &#x3D; require(&#39;@cloudbase&#x2F;node-sdk&#39;)</span><br><span class="line">this.app &#x3D; tcb.init(&#123;</span><br><span class="line">    env: &quot;misaka10013-80b8a&quot;</span><br><span class="line">&#125;)</span><br><span class="line">const db &#x3D; this.app.database()</span><br><span class="line">const _ &#x3D; db.command</span><br><span class="line">&#x2F;&#x2F;const cloud &#x3D; require(&#39;wx-server-sdk&#39;)</span><br><span class="line">&#x2F;&#x2F;var coll &#x3D; this.app.database().collection(&quot;test_db&quot;)</span><br><span class="line">&#x2F;&#x2F;cloud.init()</span><br><span class="line">const biao &#x3D; new Array(&#39;dySinput&#39;,&#39;dsjSinput&#39;,&#39;dmSinput&#39;,&#39;yxSinput&#39;,&#39;xsSinput&#39;)</span><br><span class="line">exports.main &#x3D; async () &#x3D;&gt; &#123;</span><br><span class="line">    const countResult&#x3D;new Array()</span><br><span class="line">    const xunKind&#x3D;new Array()</span><br><span class="line">    for (var i&#x3D;0,len&#x3D;biao.length; i&lt;len; i++)</span><br><span class="line">    &#123;   </span><br><span class="line">        if (biao[i]&#x3D;&#x3D;&#39;yxSinput&#39;)&#123;</span><br><span class="line">            xunKind &#x3D;[&#39;PC&#39;,&#39;NS&#39;,&#39;PSP&#39;,&#39;手游&#39;]</span><br><span class="line">        &#125;else(biao[i]&#x3D;&#x3D;&#39;xsSinput&#39;)&#123;</span><br><span class="line">            xunKind &#x3D;[&#39;英国 England&#39;,&#39;美国 America&#39;,&#39;加拿大Canada&#39;,&#39;俄罗斯 Russia&#39;,&#39;大陆 China&#39;,&#39;希腊 Greece&#39;,&#39;法国 France&#39;,&#39;德国 Germany&#39;,&#39;日本 Japan&#39;,&#39;韩国 Korea&#39;,&#39;香港 HongKong&#39;,&#39;台湾 TaiWan&#39;,&#39;泰国 Thailand&#39;,&#39;印度 India&#39;]</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        var e&#x3D;1</span><br><span class="line">        countResult[biao[i]] &#x3D; await db.collection(biao[i]).count()</span><br><span class="line">        e&#x3D;await db.collection(biao[i]).where(_.or([</span><br><span class="line">            &#123;</span><br><span class="line">                scOre: _.eq(&#39;5分&#39;)</span><br><span class="line">            &#125;,&#123;</span><br><span class="line">                MscOre: _.eq(&#39;5分&#39;)</span><br><span class="line">            &#125;</span><br><span class="line">        ])).count()</span><br><span class="line">        countResult[biao[i]][&#39;fzb&#39;] &#x3D;e.total</span><br><span class="line">        e&#x3D;countResult[biao[i]]</span><br><span class="line">        db.collection(&#39;dataUse&#39;).add(&#123;</span><br><span class="line">            data:&#123;</span><br><span class="line">                NewTime: new Date(&quot;2018-09-01&quot;),</span><br><span class="line">                total:e.total,</span><br><span class="line">                fzb:e.fzb,</span><br><span class="line">                0:[&quot;test&quot;,e.total,e.fzb],</span><br><span class="line">                KindScore:&#123;</span><br><span class="line">                    dy:&quot;[&#39;电影&#39;, &#39;总计&#39;, &#39;1分&#39;, &#39;2分&#39;, &#39;3分&#39;, &#39;4分&#39;, &#39;5分&#39;], [&#39;英国&#39;, 148, 30, 65, 53, 65, 53],[&#39;美国&#39;, 270, 92, 85, 83, 65, 53], [&#39;加拿大&#39;, 233, 67, 80, 86, 65, 53]&quot;,</span><br><span class="line">                    dsj:&quot;这个电视剧测试值&quot;+e.total+&quot;看能否加入&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    console.log(countResult)</span><br><span class="line">    return countResult[biao[0]].total</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+	<div>
+	
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	
+	</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+          
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/" rel="tag"># 数据存储</a>
+          
+            <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag"># 小程序</a>
+          
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"># 数据库</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/2358771512.html" rel="next" title="御坂美食记录评价（ing）">
+                <i class="fa fa-chevron-left"></i> 御坂美食记录评价（ing）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/p/1967088261.html" rel="prev" title="hexo利用coding自动化持续集成云端部署多平台">
+                hexo利用coding自动化持续集成云端部署多平台 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Misaka10013</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">138</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/misaka10013" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:648106369@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/misaka10013" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/zhang-ze-hao-34" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.lmyoaoa.com/inn/" title="明猪の雪地" target="_blank">明猪の雪地</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.liuboyuan.fun/" title="风雨轩窗日暮光" target="_blank">风雨轩窗日暮光</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.cnblogs.com/ygjzs/" title="跌倒的小黄瓜" target="_blank">跌倒的小黄瓜</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yujie.pro/" title="夜灭の小窝" target="_blank">夜灭の小窝</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、数据库小程序部分"><span class="nav-number">1.</span> <span class="nav-text">一、数据库小程序部分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#（二）数据库小程序设计方案"><span class="nav-number">1.1.</span> <span class="nav-text">（二）数据库小程序设计方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-小程序开发知识（程序源文件结构）"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.小程序开发知识（程序源文件结构）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-基于小程序开发的数据结构"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.基于小程序开发的数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1页面与数据的对齐"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.1页面与数据的对齐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2后端数据的数据常量"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">1.2后端数据的数据常量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-数据展示和分析页面"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.数据展示和分析页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-数据规范"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.数据规范</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、数据库可视化渲染页面"><span class="nav-number">2.</span> <span class="nav-text">二、数据库可视化渲染页面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#（一）数据网页可视化方案"><span class="nav-number">2.1.</span> <span class="nav-text">（一）数据网页可视化方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（二）数据渲染程序"><span class="nav-number">2.2.</span> <span class="nav-text">（二）数据渲染程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#（三）数据统计整理程序"><span class="nav-number">2.3.</span> <span class="nav-text">（三）数据统计整理程序</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">御坂</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">292k</span>
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.0</div>
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66531323";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+	  <script src="https://misaka10013.cn/live2d/autoload.js"></script>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  <script src="/js/src/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'd9dd27873bbc9806622a',
+      clientSecret: '5f85636536b9c39ca882ae2b231b271e9d180e0a',
+      repo: 'misaka10013.github.io',
+      owner: 'misaka10013',
+      admin: ['misaka10013'],
+      id: location.pathname,
+      id: md5(location.pathname),
+      distractionFreeMode: 'true'
+    })
+    gitalk.render('gitalk-container')
+  </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
